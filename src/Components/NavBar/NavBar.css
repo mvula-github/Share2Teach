@@ -14,7 +14,7 @@
     align-items: center;
     justify-content:space-between;
     padding: 7px 10px;
-    margin: 50px auto 5px auto;
+    margin: 50px auto 20px auto;
     background-color: #dbe2ef;
     border-radius: 40px;
     border: 1px solid #3F72AF;
@@ -96,7 +96,7 @@
 
     .nav-content{
         max-width: 50vh;
-        margin: 50px auto;
+        margin: 50px auto 20px auto;
     }
 }
 
