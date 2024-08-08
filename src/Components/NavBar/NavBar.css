@@ -1,5 +1,35 @@
-.menu-container{
-    width: 
+/* #F9f7f7, #DBE2EF, #3F72AF, #112D4E */
+.nav-container{
+    background: rgb(red, green, blue);
+    padding: 0.5rem 0;
+    position: sticky;
+    top:0;
+    z-index: 30;
+    backdrop-filter: blur(50px);
+}
+
+.nav-content{
+    max-width: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 5px 10px;
+    margin: 0px auto;
     background-color: #dbe2ef;
-    /* #F9f7f7, #DBE2EF, #3F72AF, #112D4E */
+    border-radius: 40px;
+}
+
+.nav-content h4{
+    margin: 5px 15px;
+}
+
+.nav-content ul{
+    display:flex;
+    align-items: center;
+    gap:0.5rem;
+    list-style: none;
+}
+
+.nav-content li{
+    margin: 0 20px;
 }
