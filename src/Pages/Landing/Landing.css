@@ -1,19 +1,19 @@
 .top-section{
     background-color: #3F72AF;
-    padding: 20px;
+    padding: 50px;
 }
 
 .top-section h1{
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 750;
     word-spacing: 2.5px;
     color: #f3f3f3;
     text-align: center;
-    margin: 30px 0 0 0;
+    margin: 20px 0 0 0;
 }
 
 .top-section p{
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 400;
     word-spacing: 1px;
     color: #f3f3f3;
@@ -25,13 +25,13 @@
 @media(max-width:769px)
 {
     .top-section h1{
-        font-size: 30px;
+        font-size: 40px;
         font-weight: 750;
         word-spacing: 2.5px;
     }
     
     .top-section p{
-        font-size: 12px;
+        font-size: 15px;
         font-weight: 400;
         word-spacing: 1px;
         margin: 5px 0;

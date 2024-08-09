@@ -7,13 +7,15 @@ import SearchBox from '../../Components/SearchBox/SearchBox';
 const Landing = () => {
   return (
     <div>
+
         <div className='top-section'>
           <NavBar />
-
           <h1 className='usp-heading'>Share to Inspire</h1>
-          <p className='usp-text'>Your one-stop spot for top quality educational resources</p>
-
+          <p className='usp-text'>Your one-stop spot for highend quality education resources</p>
           <SearchBox />
+        </div>
+
+        <div >
 
         </div>
         
