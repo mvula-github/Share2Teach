@@ -42,3 +42,19 @@ form button:hover{
     border: 1px solid #3F72AF;
     color: #3f72af;
 }
+
+@media(max-width: 769px){
+    form input{
+        width: 50vh;
+        height: 2rem;
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 321px){
+    form input{
+        width: 40vh;
+        height: 2rem;
+        font-size: 10px;
+    }
+}
