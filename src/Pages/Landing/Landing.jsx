@@ -13,10 +13,9 @@ const Landing = () => {
           <h1 className='usp-heading'>Share to Inspire</h1>
           <p className='usp-text'>Your one-stop spot for highend quality education resources</p>
           <SearchBox />
-        </div>
 
-        <div >
-
+          <h2 className='landing-down-arrow'> &#8964; </h2>
+          
         </div>
         
     </div>

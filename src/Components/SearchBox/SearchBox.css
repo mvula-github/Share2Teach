@@ -19,6 +19,11 @@ form input{
     color:#112d41;
     border-radius: 40px;
     border: 1px solid #3F72AF;
+    transition: all 0.5s ease;
+}
+
+form input:hover{
+    width:75vh;
 }
 
 form button{
@@ -36,8 +41,6 @@ form button{
 }
 
 form button:hover{
-    width: 8rem;
-    height: 2.5rem;
     background: #f9f7f7;
     border: 1px solid #3F72AF;
     color: #3f72af;
@@ -48,6 +51,10 @@ form button:hover{
         width: 50vh;
         height: 2rem;
         font-size: 12px;
+    }
+
+    form input:hover{
+        width:57vh;
     }
 }
 

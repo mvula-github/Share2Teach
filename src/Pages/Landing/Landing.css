@@ -1,6 +1,5 @@
 .top-section{
     background-color: #3F72AF;
-    padding: 50px;
 }
 
 .top-section h1{
@@ -20,6 +19,19 @@
     text-align: center;
     margin: 5px 0;
     padding-bottom: 5px;;
+}
+
+.landing-down-arrow{
+    color: #f9f7f7;
+    font-size: 2rem;
+    font-weight: 550;
+    padding-bottom:30px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.landing-down-arrow:hover{
+    font-size: 3rem;
 }
 
 @media(max-width:769px)
