@@ -98,6 +98,10 @@
         max-width: 50vh;
         margin: 50px auto 20px auto;
     }
+
+    .nav-content ul{
+        display: none;
+    }
 }
 
 @media(max-width: 321px){
@@ -105,5 +109,9 @@
     .nav-content{
         max-width: 40vh;
         margin: 20px auto;
+    }
+
+    .nav-content ul{
+        display: none;
     }
 }
