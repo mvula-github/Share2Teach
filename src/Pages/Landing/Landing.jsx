@@ -64,15 +64,50 @@ const Landing = () => {
             <h1> Are you an Educator?</h1>
             <p>Join a commnunity of educators who share innovative ideas  and  revolutionize your classes</p>
           </div>
+        </div>
 
-          <div className='landing-more-info'>
-            <h2>paper</h2>
-            <h2>paper</h2>
-            <h2>paper</h2>
+        <div className='landing-more-info'>
+
+          <div>
+            <h4>Logo</h4>
+              
+            <button>login</button>
+          </div>
+
+          <div>
+            <h4>For Educators</h4>
+
+            <ul>
+              <a href="#"><li>learn more</li></a>
+              <a href="#"><li>apply</li></a>
+            </ul>
+
+          </div>
+
+          <div>
+            <h4>Platform</h4>
+
+            <ul>
+              <a href="#"><li>about us</li></a>
+              <a href="#"><li>contact us</li></a>
+              <a href="#"><li>self-directed learning</li></a>
+              <a href="#"><li>FAQ</li></a>
+            </ul>
+
+          </div>
+
+          <div>
+            <h4>Legal</h4>
+
+            <ul>
+              <a href="#"><li>temrs</li></a>
+              <a href="#"><li>privacy policy</li></a>
+              <a href="#"><li>disclaimer</li></a>
+            </ul>
+
           </div>
         </div>
-        
-    </div>
+    </div>  
   )
 }
 

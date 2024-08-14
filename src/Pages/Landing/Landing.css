@@ -115,6 +115,8 @@
 .landing-more-info{
     background-color: #112d41;
     color: #DBE2EF;
+    display: flex;
+    justify-content: space-between;
 }
 
 
