@@ -1,16 +1,15 @@
-import React from 'react';
-import './accountCreation.css'
-import user_icon from 'C:\Jameela_Account\Share2Teach\public\assets\img3.png'
-import password_icon from 'C:\Jameela_Account\Share2Teach\public\assets\business-authorityAC.png'
-import email_icon from 'C:\Jameela_Account\Share2Teach\public\assets\emailAC.jpeg'
+// eslint-disable-next-line no-unused-vars
+import React, {useState} from 'react';
+import './SignUp.css'
 
 
-const accountCreation = () => {
+const SignUp = () => {
 
     const [action,setAction] = useState("Sign Up");
 
 
     return (
+        <div>
         <div className='container'>
             <div className='header'>
                 <div className='text'>{action}</div>
@@ -18,16 +17,16 @@ const accountCreation = () => {
             </div>
             <div className='inputs'>
                 {action==="Login"?<div></div>:<div className='input'>
-                    <img src={user_icon} alt=""/>
+                    <img src='../../../assets/icons/img3.png' alt=""/>
                     <input type = "text" placeholder="Name"/>
                 </div>}
                 
                 <div className='input'>
-                    <img src={email_icon} alt=""/>
+                    <img src='../../../assets/icons/emailAC.jpeg' alt=""/>
                     <input type = "email" placeholder="Email"/>
                 </div>
                 <div className='input'>
-                    <img src={password_icon} alt=""/>
+                    <img src='../../../assets/icons/business-authorityAC.png' alt=""/>
                     <input type = "password" placeholder="Password"/>
                 </div>
             </div>
@@ -38,6 +37,7 @@ const accountCreation = () => {
                 <div className={action==="Sign Up"?"submit gray": "submit"} onClick={()=>{setAction("Login")}}>Login</div>
             </div>
 
+            </div>
         </div>
            
    
@@ -46,4 +46,4 @@ const accountCreation = () => {
 };
 
 
-export default accountCreation
+export default SignUp;
