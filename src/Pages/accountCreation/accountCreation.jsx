@@ -1,8 +1,8 @@
 import React from 'react';
 import './accountCreation.css'
-import user_icon from '../../public/assets/userAC.png'
-import password_icon from '../../public/assets/business-authorityAC.png'
-import email_icon from '../../public/assets/emailAC.jpeg'
+import user_icon from 'C:\Jameela_Account\Share2Teach\public\assets\img3.png'
+import password_icon from 'C:\Jameela_Account\Share2Teach\public\assets\business-authorityAC.png'
+import email_icon from 'C:\Jameela_Account\Share2Teach\public\assets\emailAC.jpeg'
 
 
 const accountCreation = () => {
