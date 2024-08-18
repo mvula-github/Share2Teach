@@ -1,6 +1,14 @@
+<<<<<<< HEAD:src/Pages/SignUp/SignUp.jsx
 // eslint-disable-next-line no-unused-vars
 import React, {useState} from 'react';
 import './SignUp.css'
+=======
+import React from 'react';
+import './accountCreation.css'
+import user_icon from 'C:/Jameela_Account/Share2Teach/public/assets/img3.png'
+import password_icon from 'C:/Jameela_Account/Share2Teach/public/assets/business-authorityAC.png'
+import email_icon from 'C:/Jameela_Account/Share2Teach/public/assets/emailAC.jpeg'
+>>>>>>> 2b92f33 (fixed changes):src/Pages/accountCreation/accountCreation.jsx
 
 
 const SignUp = () => {
@@ -30,7 +38,7 @@ const SignUp = () => {
                     <input type = "password" placeholder="Password"/>
                 </div>
             </div>
-            {action==="Sign Up"?<div></div>: <div className='forgot-password'>Lost Password? <span>Click Here</span></div>}
+            {action==="Sign Up"?<div></div>:<div className='forgot-password'>Lost Password? <span>Click Here</span></div>}
            
             <div className='submit-container'>
                 <div className={action==="Login"?"submit gray": "submit "} onClick={()=>{setAction("Sign Up")}}>Sign Up</div>
