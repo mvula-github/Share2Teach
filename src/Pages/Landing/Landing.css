@@ -112,12 +112,49 @@
 
 /* _+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_ */
 
-.landing-more-info{
+.landing-footer-info{
     background-color: #112d41;
     color: #DBE2EF;
     display: flex;
     justify-content: space-between;
+    padding: 10px 40px;
 }
+
+.footer-info{
+    margin: 20px 0;
+}
+
+.footer-info h4{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.footer-info ul{
+    text-decoration: none;
+    padding:0;
+    color: #f9f7f7;
+    list-style: none;
+}
+
+.footer-info a{
+    text-decoration: none;
+    color: #f9f7f7;
+}
+
+.footer-info li{
+    font-size: 15px;
+    font-weight: 400;
+    padding:5px 0;
+}
+
+
+/*-----------------------------------------------------------------------------------------*/
+.copyright-section h4{
+    text-align: center;
+    margin: 10px;
+    font-weight:400;
+}
+
 
 
 
