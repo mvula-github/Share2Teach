@@ -1,14 +1,6 @@
-<<<<<<< HEAD:src/Pages/SignUp/SignUp.jsx
 // eslint-disable-next-line no-unused-vars
 import React, {useState} from 'react';
 import './SignUp.css'
-=======
-import React from 'react';
-import './accountCreation.css'
-import user_icon from 'C:/Jameela_Account/Share2Teach/public/assets/img3.png'
-import password_icon from 'C:/Jameela_Account/Share2Teach/public/assets/business-authorityAC.png'
-import email_icon from 'C:/Jameela_Account/Share2Teach/public/assets/emailAC.jpeg'
->>>>>>> 2b92f33 (fixed changes):src/Pages/accountCreation/accountCreation.jsx
 
 
 const SignUp = () => {
@@ -25,16 +17,16 @@ const SignUp = () => {
             </div>
             <div className='inputs'>
                 {action==="Login"?<div></div>:<div className='input'>
-                    <img src='../../../assets/icons/img3.png' alt=""/>
+                    <img src='../../../assets/icons/img3.png' alt="description" style = "width:200px; height:200px;"/>
                     <input type = "text" placeholder="Name"/>
                 </div>}
                 
                 <div className='input'>
-                    <img src='../../../assets/icons/emailAC.jpeg' alt=""/>
+                    <img src='../../../assets/icons/emailAC.jpeg' alt="description" style = "width:200px; height:200px;"/>
                     <input type = "email" placeholder="Email"/>
                 </div>
                 <div className='input'>
-                    <img src='../../../assets/icons/business-authorityAC.png' alt=""/>
+                    <img src='../../../assets/icons/business-authorityAC.png' alt="description" style = "width:200px; height:200px;"/>
                     <input type = "password" placeholder="Password"/>
                 </div>
             </div>
