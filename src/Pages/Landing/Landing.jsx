@@ -42,7 +42,7 @@ const Landing = () => {
 
             <div className='landing-hero-section'>
               <div className='hero-section'>
-                <img src="../../../public/assets/dog.svg" alt="" />
+                <img src="../../../assets/dog.svg" alt="" />
                   <div>
                     <h4>Heading</h4>
                     <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem vel laborum exercitationem quos. Placeat eum, tempore corporis illum repellendus modi, eius reprehenderit quibusdam tempora vel, natus labore non sed vero!</p>
@@ -54,7 +54,7 @@ const Landing = () => {
                   <h4>Heading</h4>
                   <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem vel laborum exercitationem quos. Placeat eum, tempore corporis illum repellendus modi, eius reprehenderit quibusdam tempora vel, natus labore non sed vero!</p>
                 </div>
-                <img src="../../../public/assets/dog.svg" alt="" />
+                <img src="../../../assets/dog.svg" alt="" />
               </div>
             </div>
         </div>
