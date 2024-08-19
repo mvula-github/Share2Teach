@@ -1,16 +1,14 @@
-import './App.css'
-import Landing from './Pages/Landing/Landing'
+import "./App.css";
+import Landing from "./Pages/Landing/Landing";
 
 function App() {
-
   return (
     <>
-      <div className='app-container'>
+      <div className="app-container">
         <Landing />
-
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
