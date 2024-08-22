@@ -10,23 +10,23 @@ const SignUp = () => {
 
     return (
         <div>
-        <div className='container'>
+          <div className='container'>
             <div className='header'>
                 <div className='text'>{action}</div>
                 <div className='underline'></div>
             </div>
             <div className='inputs'>
                 {action==="Login"?<div></div>:<div className='input'>
-                    <img src='../../../assets/icons/img3.png' alt="description" style = "width:200px; height:200px;"/>
+                    <img src='../../../assets/icons/img3.png' alt="description"/>
                     <input type = "text" placeholder="Name"/>
                 </div>}
                 
                 <div className='input'>
-                    <img src='../../../assets/icons/emailAC.jpeg' alt="description" style = "width:200px; height:200px;"/>
+                    <img src='../../../assets/icons/emailAC.jpeg' alt="description" />
                     <input type = "email" placeholder="Email"/>
                 </div>
                 <div className='input'>
-                    <img src='../../../assets/icons/business-authorityAC.png' alt="description" style = "width:200px; height:200px;"/>
+                    <img src='../../../assets/icons/business-authorityAC.png' alt="description" />
                     <input type = "password" placeholder="Password"/>
                 </div>
             </div>
@@ -37,7 +37,7 @@ const SignUp = () => {
                 <div className={action==="Sign Up"?"submit gray": "submit"} onClick={()=>{setAction("Login")}}>Login</div>
             </div>
 
-            </div>
+          </div>
         </div>
            
    
