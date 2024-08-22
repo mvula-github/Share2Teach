@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, {useState} from 'react';
+import {Link} from 'react-router-dom';//import Link from react-router-dom
 import './SignUp.css'
 
 
@@ -30,7 +31,12 @@ const SignUp = () => {
                     <input type = "password" placeholder="Password"/>
                 </div>
             </div>
-            {action==="Sign Up"?<div></div>:<div className='forgot-password'>Lost Password? <span>Click Here</span></div>}
+           {action === "Sign Up" ? null :
+            <div className='forgot-password'>
+                Lost Password? <Link to="/reset-password">Click Here</Link> {/* Link to Password Reset */}
+            </div>
+            }
+        
            
             <div className='submit-container'>
                 <div className={action==="Login"?"submit gray": "submit "} onClick={()=>{setAction("Sign Up")}}>Sign Up</div>
