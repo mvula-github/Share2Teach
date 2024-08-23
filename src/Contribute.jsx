@@ -72,7 +72,7 @@ const Contribute = () => {
     setSearchQuery(''); // Reseting search query
     setFormErrors({});
   };
-
+//Input validation
   const validateForm = () => {
     const errors = {};
     if (!role) errors.role = 'Role is required';
@@ -239,7 +239,7 @@ const Contribute = () => {
       <Modal isOpen={isModalOpen} onRequestClose={() => setIsModalOpen(false)}>
         <h2>License or Terms of Use</h2>
         <div style={{ maxHeight: '300px', overflowY: 'scroll' }}>
-          <p>Terms and conditions content goes here...</p>
+          <p>Agree to the terms dude, don't be childish!</p>
         </div>
         <div>
           <label>
