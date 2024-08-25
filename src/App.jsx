@@ -10,8 +10,8 @@ function App() {
     <>
       <div className='app-container'>
         <Landing />
-        {/* <Contributors /> */}
-        <FAQ />
+        <Contributors />
+        {/*<FAQ />*/}
   
         {/*<Contribute />*/}
 

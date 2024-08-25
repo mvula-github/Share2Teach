@@ -1,23 +1,26 @@
-import React, { useState } from 'react';
-import './Contributors.css'; // Import the CSS file
+import React, { useState, useEffect } from 'react';
+import './Contributors.css'; // Importing the CSS file
+import mockContributors from './mockContributors'; // Importing the mock data
+
 
 const Contributors = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
+  const [contributors, setContributors] = useState(mockContributors); // Initialising with mock data
+
+  useEffect(() => {
+    // This is where data will be fetched from the API
+    // Example:
+    // fetch('/api/contributors')
+    //   .then(response => response.json())
+    //   .then(data => setContributors(data));
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(`Email: ${email}, Message: ${message}`);
     alert('Your request has been sent to the admin.');
-  };
-
-  const contributors = {
-    founders: ['Dr. Chantelle Bosch', 'Mr. Johan Venter'],
-    administrators: ['Mr. John Klerck', 'Mr. Heiki Pelser'],
-    moderators: ['Prof. Dorothy Laubscher'],
-    educators: ['Mr. Heystek Grobler'],
-    resources: ['Mr. Nick Mogotlane', 'Mr. Mvula Kolweni', 'Miss Jameela Sparks', 'Miss Olwethu Zungu'],
   };
 
   const filteredContributors = {
