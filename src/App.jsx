@@ -6,21 +6,26 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 
 
-
 function App() {
 
   return (
     <Router>
-      <div className='app-container'>
-        <Routes>
-          <Route path="/" element={<Landing/>} />
-          <Route path="/signup" element={<SignUp/>} />
-          <Route path="/reset-password" element={<PasswordReset />} />
-        </Routes>
-        </div> 
-        {/*<Landing />
-        <SignUp />*/}
+      <Routes>
+        <Route path="/"element={
+         <>
+           <Landing />
+           <SignUp />
+         </>
+        } />
+        <Route path="/reset-password"element={<PasswordReset/>} />
+      </Routes>
     </Router>
+    
+    /*
+       <Landing />
+        <SignUp />
+        */
+   
   );
 };
 

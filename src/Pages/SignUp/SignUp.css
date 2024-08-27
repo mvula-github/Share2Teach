@@ -65,6 +65,7 @@
     border: 1px solid #3F72AF;
     border-radius: 15px;
     padding: 0 20px;
+    padding-left: 30px;
 }
 
 .forgot-password{
@@ -89,13 +90,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 220px;
-    height: 59px;
+    width: 80px;
+    height: 20px;
     color: white;
     background: #3F72AF;
-    border-radius: 50px;
-    font-size: 19px;
-    font-weight: 700;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 100;
     cursor: pointer;
 }
 

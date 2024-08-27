@@ -12,8 +12,12 @@ const PasswordReset = () => {
                 </div>
                 <div className='inputs'>
                     <div className='input'>
-                        <img src ='../../../assets/icons/emailAC.jpeg' alt = "description"/>
+                       {/*} <img src ='../../../assets/icons/emailAC.jpeg' alt = "description"/>*/}
                         <input type = "email" placeholder = "Enter your email" />
+                    </div>
+                    <div className='input'>
+                       {/*} <img src ='../../../assets/icons/emailAC.jpeg' alt = "description"/>*/}
+                        <input type = "password" placeholder = "Enter your new password" />
                     </div>
                 </div>
                 <div className='submit-container'>
