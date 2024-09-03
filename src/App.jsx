@@ -1,6 +1,6 @@
 import './App.css'
 import Landing from './Pages/Landing/Landing'
-import SelfDirect from './Pages/Landing/SelfDirect'
+
 
 function App() {
 

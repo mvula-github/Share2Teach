@@ -1,5 +1,5 @@
 import React from 'react';
-import './SelfDirect.css';
+import "./SelfDirect.css";
 
 const SelfDirect = () => {
     const subs = [
@@ -7,7 +7,7 @@ const SelfDirect = () => {
             title: 'English',
             links: [
                 {name: 'Nouns', url: ''},
-                {name: 'Nouns', url: ''}
+                {name: 'Verbs', url: ''}
             ],
         },
 
@@ -156,27 +156,28 @@ const SelfDirect = () => {
         },
 
 
-    ]
+    ];
 
 
 
     return (
-        <div className='container'>
-            <h1 className='heading'>Self-directed Learning</h1>
-            {SelfDirect.map((sub, index) => (
-                <div key = {index} className='subs'>
+        
+        <div>
+            <h1 className='heading'>Self-Directed Learning page</h1>
+            {subs.map((sub, index) => (
+                <div key={index} className='subs'>
                     <h2 className='subsTitle'>{sub.title}</h2>
                     <ul className='linkList'>
-                        {subject.links.map((link, i) =>(
-                            <li key = {i}>
-                                <a href = {link.url} target = "blank" rel = "noopener noreferrer"> {link.name}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            ))};
-
+                     {sub.links.map((link, i) => (
+                        <li key={i}>
+                            <a href={link.url} target="_blank" rel="noopener noreferrer">
+                                {link.name}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+            ))}
         </div>
     );
 }

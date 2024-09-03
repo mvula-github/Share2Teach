@@ -1,0 +1,25 @@
+.heading {
+    text-align: center;
+    color: #3F72AF;
+    margin-bottom: 40px;
+
+}
+
+.subsTitle {
+    text-align: justify;
+}
+
+.linkList{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.linkList li{
+    margin-bottom: 10px;
+}
+
+.linkList li a{
+    display: inline-block;
+}
+
+
