@@ -52,6 +52,7 @@ const Landing = () => {
           </div>
 
           <div className="hero-section">
+            <img className="hide-pic" src="../../../assets/dog.svg" alt="" />
             <div>
               <h4>Heading</h4>
               <p>
@@ -62,7 +63,7 @@ const Landing = () => {
                 tempora vel, natus labore non sed vero!
               </p>
             </div>
-            <img src="../../../assets/dog.svg" alt="" />
+            <img className="show-pic" src="../../../assets/dog.svg" alt="" />
           </div>
         </div>
       </div>
@@ -75,7 +76,6 @@ const Landing = () => {
             revolutionize your classes
           </p>
         </div>
-
         <Footer />
       </div>
     </div>
