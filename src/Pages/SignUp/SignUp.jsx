@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, {useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 import {Link} from 'react-router-dom';//import Link from react-router-dom
 import './SignUp.css'
 
@@ -7,6 +8,7 @@ import './SignUp.css'
 const SignUp = () => {
 
     const [action,setAction] = useState("Sign Up");//to manage the current state of the form, whether the educator is in the sign up form or the login form
+
     const [formData, setFormData] = useState({
         firstName:"",
         lastName:"",
@@ -14,7 +16,7 @@ const SignUp = () => {
         password:"",
         confirmPassword:""
     });//manages the form data for both sign up and login forms
-    const [errors, setErrors]= useState({});//manages and displays errors in the form 
+    const [errors, setErrors]= useState({}); //manages and displays errors in the form 
     const navigate = useNavigate();//Hook for navigation which we are able to do because we imported useNavigate from react-router-dom
 
     const handleInputChange = (e) => {//(e) contains the properties of the changed input field
@@ -63,11 +65,13 @@ const SignUp = () => {
                 <div className='text'>{action}</div>
                 <div className='underline'></div>
             </div>
-                <form onSubmit={handleSubmit}>
-                    <div className='inputs'>
-                        {action === "Login" ? null : (
-                            {/*First name input is rendered first for both sign up and login */}
-                            <div className='input'>
+                
+            <form onSubmit={handleSubmit}>
+                <div className='inputs'>
+                    {
+                        /*First name input is rendered first for both sign up and login */
+                        action === "Login" ? null : (
+                        <div className ='input'>
                                 <input 
                                     name="firstName"
                                     type="text" 
@@ -77,7 +81,8 @@ const SignUp = () => {
                                 />
                                 {errors.firstName && <span className='error'>{errors.firstName}</span>}
                             </div>
-                        )}
+                        )
+                    }
     
                         {/* Conditionally render Last name input only for Sign Up */}
                         {action === "Sign Up" && (
@@ -138,12 +143,14 @@ const SignUp = () => {
                     <Link to="/">Back to Home</Link>
 
                 </form>
+
+            
             </div>
         </div>
 
     );
   
-};
+    };
 
 
 export default SignUp;
