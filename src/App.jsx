@@ -2,14 +2,13 @@ import './App.css';
 import Landing from './Pages/Landing/Landing';
 import SignUp from './Pages/SignUp/SignUp';
 import PasswordReset from './Pages/PasswordReset/PasswordReset';
-import OER from './Pages/OER/OER'; // Import the OER component
-import Navigation from './Components/Navigation'; // Import the Navigation component
+import OER from './Pages/OER/OER';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <Router>
-      <Navigation /> {/* Add Navigation component */}
+      <Navigation /> 
       <Routes>
         <Route path="/" element={
           <>
