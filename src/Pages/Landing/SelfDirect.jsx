@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import "./SelfDirect.css";
 
@@ -36,6 +37,14 @@ const SelfDirect = () => {
         },
 
         {
+            title: 'Technical Mathematics',
+            links: [
+                {name: 'Nouns', url: ''},
+                {name: 'Nouns', url: ''}
+            ]
+        },
+
+        {
             title: 'Life Skills',
             links: [
                 {name: 'Nouns', url: ''},
@@ -53,6 +62,14 @@ const SelfDirect = () => {
 
         {
             title: 'Natural Sciences',
+            links: [
+                {name: 'Nouns', url: ''},
+                {name: 'Nouns', url: ''}
+            ],
+        },
+
+        {
+            title: 'Social Sciences',
             links: [
                 {name: 'Nouns', url: ''},
                 {name: 'Nouns', url: ''}
@@ -165,7 +182,6 @@ const SelfDirect = () => {
         <div>
             <h1 className='heading'>Self-Directed Learning page</h1>
 
-            /** */
             <p className='paragraph'>Welcome to the self-directed landing page. In this page, you will find a collection of videos based on the subject you are learning with corresponding topics. Click on the topics below to direct you to helpful YouTube videos and get ready to learn.</p>
             {subs.map((sub, index) => (
                 <div key={index} className='subs'>
