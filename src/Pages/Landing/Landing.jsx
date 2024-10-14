@@ -2,6 +2,7 @@
 import React from 'react';
 import "./Landing.css";
 import NavBar from '../../Components/NavBar/NavBar';
+import { Link } from 'react-router-dom';
 import SearchBox from '../../Components/SearchBox/SearchBox';
 
 const Landing = () => {
@@ -88,7 +89,8 @@ const Landing = () => {
             <h4>Platform</h4>
 
             <ul>
-              <a href="#"><li>about us</li></a>
+              <li><Link to="/about-us">about us</Link></li>
+              <li><Link to="/oer">OER</Link></li>
               <a href="#"><li>contact us</li></a>
               <a href="#"><li>self-directed learning</li></a>
               <a href="#"><li>FAQ</li></a>
