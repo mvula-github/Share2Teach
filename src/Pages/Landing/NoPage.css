@@ -1,0 +1,23 @@
+.no-page-container h1{
+    font-size: 48px;
+    font-weight: bold;
+    color: #3F72AF;
+    animation: bounce 2s infinite;
+}
+
+.no-page-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
