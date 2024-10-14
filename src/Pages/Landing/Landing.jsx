@@ -73,6 +73,10 @@ const Landing = () => {
             <h4>Logo</h4>
               
             <button>login</button>
+          {/* Link to Sign Up page */}
+          <p>
+            Don't have an account? <Link to="/signup">Sign Up</Link>
+          </p>
           </div>
 
           <div>

@@ -16,12 +16,13 @@ function App() {
         <Route path="/" element={
           <>
             <Landing />
-            <SignUp />
+            {/*<SignUp />*/}
         
             
           </>
         } />
         <Route path="/reset-password" element={<PasswordReset />} />
+        <Route path="/signUp" element={<SignUp />} />
         <Route path="/oer" element={<OER />} /> {/* Add route for OER */}
         <Route path="/about-us" element={<AboutUs />} /> {/* Step 3: Add route for About Us */} 
       </Routes>

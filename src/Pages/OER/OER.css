@@ -1,36 +1,35 @@
-/* OER.css */
 .oer-container {
-    max-width: 1200px;
-    margin: 0 auto;
     padding: 20px;
+    max-width: 800px;
+    margin: auto;
 }
 
-.upload-section, .papers-section {
-    margin-bottom: 40px;
+.upload-section {
+    margin-bottom: 30px;
 }
 
 .upload-form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
 .upload-form label {
-    display: flex;
-    flex-direction: column;
+    margin: 10px 0;
 }
 
-.upload-form input[type="text"], 
+.upload-form input[type="text"],
 .upload-form input[type="file"] {
-    padding: 8px;
-    border: 1px solid #ddd;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 .upload-form button {
-    padding: 10px;
-    background-color: #007BFF;
+    background-color: #007bff;
     color: white;
     border: none;
+    padding: 10px;
+    border-radius: 4px;
     cursor: pointer;
 }
 
@@ -38,25 +37,36 @@
     background-color: #0056b3;
 }
 
-.papers-list input {
-    padding: 8px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
+.papers-list {
+    margin-top: 20px;
+}
+
+.papers-list h2 {
+    margin-bottom: 10px;
+}
+
+.papers-list input[type="text"] {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 .papers-list ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 
 .papers-list li {
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
 }
 
 .papers-list a {
     text-decoration: none;
-    color: #007BFF;
+    color: #007bff;
 }
 
 .papers-list a:hover {
