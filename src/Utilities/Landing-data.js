@@ -1,22 +1,22 @@
 export const INFO = [
   {
-    image: "../../assets/dog.svg",
-    title: "Heading 1",
+    image: "../../assets/books.svg",
+    title: "Content",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem in eius ratione dolore, magnam reiciendis pariatur numquam culpa minima consectetur harum. Nostrum excepturi accusantium, quidem eligendi delectus cum? Mollitia, architecto.",
+      "High-quality content is essential for effective learning. It should be relevant, engaging, and accessible to all learners.",
   },
 
   {
-    image: "../../assets/dog.svg",
-    title: "Heading 2",
+    image: "../../assets/whiteboard.svg",
+    title: "User Experience",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem in eius ratione dolore, magnam reiciendis pariatur numquam culpa minima consectetur harum. Nostrum excepturi accusantium, quidem eligendi delectus cum? Mollitia, architecto.",
+      " A positive user experience is crucial for motivating learners and fostering a love of learning. It involves creating accessible, engaging, and supportive learning environments.",
   },
 
   {
-    image: "../../assets/dog.svg",
-    title: "Heading 3",
+    image: "../../assets/recycle.svg",
+    title: "Sustainability",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem in eius ratione dolore, magnam reiciendis pariatur numquam culpa minima consectetur harum. Nostrum excepturi accusantium, quidem eligendi delectus cum? Mollitia, architecto.",
+      "Ensuring education is environmentally friendly and socially responsible",
   },
 ];

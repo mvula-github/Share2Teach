@@ -1,67 +1,67 @@
-.search-box-container{
-    width:100%;
-    display: flex;
-    justify-content: center;
+.search-box-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-form{
-    display: flex;
-    flex-direction: column;
+form {
+  display: flex;
+  flex-direction: column;
 }
 
-form input{
-    width:70vh;
-    padding: 20px 20px;
-    margin: 40px auto 20px auto;
-    font-size: 13.5px;
-    font-weight: 450;
-    background-color: #f9f7f7;
-    color:#112d41;
-    border-radius: 40px;
-    border: 1px solid #3F72AF;
-    transition: all 0.5s ease;
+form input {
+  width: 70vh;
+  padding: 20px 20px;
+  margin: 40px auto 20px auto;
+  font-size: 13.5px;
+  font-weight: 450;
+  background-color: #f9f7f7;
+  color: #112d41;
+  border-radius: 40px;
+  border: 1px solid #3f72af;
+  transition: all 0.5s ease;
 }
 
-form input:hover{
-    width:75vh;
+form input:hover {
+  width: 75vh;
 }
 
-form button{
-    width: 7rem;
+form button {
+  width: 7rem;
+  height: 2rem;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 10px;
+  background: #3f72af;
+  border: 1px solid #f9f7f7;
+  color: #f9f7f7;
+  margin: 0px auto 15px auto;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #f9f7f7;
+  border: 1px solid #3f72af;
+  color: #3f72af;
+}
+
+@media (max-width: 769px) {
+  form input {
+    width: 75vh;
     height: 2rem;
-    font-size: 13px;
-    font-weight: 500;
-    border-radius: 10px;
-    background: #3F72AF ;
-    border: 1px solid #f9f7f7;
-    color: #f9f7f7;
-    margin: 0px auto 15px auto;
-    transition: all 0.5s ease;
-    cursor:pointer;
+    font-size: 10px;
+  }
+
+  form input:hover {
+    width: 90vh;
+  }
 }
 
-form button:hover{
-    background: #f9f7f7;
-    border: 1px solid #3F72AF;
-    color: #3f72af;
-}
-
-@media(max-width: 769px){
-    form input{
-        width: 50vh;
-        height: 2rem;
-        font-size: 12px;
-    }
-
-    form input:hover{
-        width:57vh;
-    }
-}
-
-@media(max-width: 321px){
-    form input{
-        width: 40vh;
-        height: 2rem;
-        font-size: 10px;
-    }
+@media (max-width: 321px) {
+  form input {
+    width: 40vh;
+    height: 2rem;
+    font-size: 10px;
+  }
 }

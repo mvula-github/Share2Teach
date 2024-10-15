@@ -38,32 +38,43 @@ const Landing = () => {
 
         <div className="landing-hero-section">
           <div className="hero-section">
-            <img src="../../../assets/dog.svg" alt="" />
+            <img src="../../../assets/img2.jpg" alt="" />
             <div>
-              <h4>Heading</h4>
+              <h4>Discover, Learn, Grow</h4>
               <p>
                 {" "}
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Dolorem vel laborum exercitationem quos. Placeat eum, tempore
-                corporis illum repellendus modi, eius reprehenderit quibusdam
-                tempora vel, natus labore non sed vero!
+                Our platform offers a diverse range of resources, including
+                interactive worksheets, engaging videos, and comprehensive
+                lesson plans. Whether you are studying for exams, exploring new
+                subjects, or simply looking to expand your knowledge, Discover,
+                Learn, Grow has everything you need to succeed.
               </p>
             </div>
           </div>
 
           <div className="hero-section">
-            <img className="hide-pic" src="../../../assets/dog.svg" alt="" />
+            <img
+              className="hide-pic"
+              src="../../../assets/student-climbing.png"
+              alt=""
+            />
             <div>
-              <h4>Heading</h4>
+              <h4>Quality Educational Resources</h4>
               <p>
                 {" "}
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Dolorem vel laborum exercitationem quos. Placeat eum, tempore
-                corporis illum repellendus modi, eius reprehenderit quibusdam
-                tempora vel, natus labore non sed vero!
+                Our platform provides a vast collection of carefully curated
+                resources designed to spark curiosity, foster critical thinking,
+                and empower learners of all ages. Whether you are a student
+                looking to supplement your classroom learning or a teacher
+                seeking innovative resources, Ignite Learning has something to
+                offer.
               </p>
             </div>
-            <img className="show-pic" src="../../../assets/dog.svg" alt="" />
+            <img
+              className="show-pic"
+              src="../../../assets/student-climbing.png"
+              alt=""
+            />
           </div>
         </div>
       </div>

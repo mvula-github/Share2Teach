@@ -1,7 +1,7 @@
 /* ----------------------------------------------------------------------------------- */
 .landing-top-section {
   padding: 10px 0;
-  margin: 40px auto;
+  margin: 40px auto 150px auto;
 }
 
 .landing-top-section h1 {
@@ -46,8 +46,8 @@
 }
 
 .info-panel img {
-  width: 150px;
-  height: 150px;
+  width: 80px;
+  height: 80px;
   margin: auto;
 }
 
@@ -74,12 +74,13 @@
   display: flex;
   gap: 2rem;
   /* border: 1px solid green; */
-  margin: 50px;
+  margin: 5rem auto;
 }
 
 .hero-section img {
-  width: 450px;
-  height: 450px;
+  width: 600px;
+  height: 350px;
+  margin: 20px 0px;
 }
 
 .hide-pic {
