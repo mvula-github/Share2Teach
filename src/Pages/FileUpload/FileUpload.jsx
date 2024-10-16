@@ -4,7 +4,7 @@ import AttachmentIcon from "@mui/icons-material/Attachment";
 import DeleteIcon from "@mui/icons-material/Delete";
 import "./FileUpload.css";
 import mockData from "./mockData.json"; // Import mock data
-
+import categoriesData from "./CategoriesData.json"; // Import categories data
 
 /*const subjects = ["Math", "Science", "History"]; // Example subjects
 const grades = ["Grade R", "Grade 1", "Grade 2", "Grade 3", "Grade 4", "Grade 5", "Grade 6", "Grade 7", "Grade 8", "Grade 9", "Grade 10", "Grade 11", "Grade 12"]; // Example grades
@@ -20,6 +20,7 @@ function FileUpload({ accept = "", onSelectFile, onDeleteFile, disabled }) {
   const [description, setDescription] = useState("");
   const [subjects, setSubjects] = useState([]);
   const [grades, setGrades] = useState([]);
+  const [categories, setCategories] = useState([]);
   const [errors, setErrors] = useState({});
 
   useEffect(() => {
@@ -29,6 +30,7 @@ function FileUpload({ accept = "", onSelectFile, onDeleteFile, disabled }) {
     // Use mock data for subjects and grades
     setSubjects(mockData.subjects);
     setGrades(mockData.grades);
+    setCategories(categoriesData.categories); // Set categories from JSON data
   }, []);
 
   /*
@@ -181,6 +183,21 @@ function FileUpload({ accept = "", onSelectFile, onDeleteFile, disabled }) {
         ))}
       </TextField>
       <TextField
+        select
+        label="Category"
+        value={category}
+        onChange={(e) => setCategory(e.target.value)}
+        disabled={disabled}
+        error={!!errors.category}
+        helperText={errors.category}
+      >
+        {categories.map((option) => (
+          <MenuItem key={option} value={option}>
+            {option}
+          </MenuItem>
+        ))}
+      </TextField>
+      <TextField
         label="Year"
         type="number"
         value={year}
@@ -188,14 +205,6 @@ function FileUpload({ accept = "", onSelectFile, onDeleteFile, disabled }) {
         disabled={disabled}
         error={!!errors.year}
         helperText={errors.year}
-      />
-      <TextField
-        label="Category"
-        value={category}
-        onChange={(e) => setCategory(e.target.value)}
-        disabled={disabled}
-        error={!!errors.category}
-        helperText={errors.category}
       />
       <TextField
         label="Description"

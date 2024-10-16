@@ -4,9 +4,13 @@ import FAQ from './Pages/FAQ/FAQ'
 import Landing from './Pages/Landing/Landing'
 import FileUpload from './Pages/FileUpload/FileUpload'; 
 import Moderate from './Pages/Moderate/Moderate';
+//import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import {Link} from 'react-router-dom';
+
  
 
 function App() {
+
   const handleSelectFile = (file) => {
     console.log("Selected file:", file);
   };
