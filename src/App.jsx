@@ -1,11 +1,13 @@
 import './App.css'
 import Landing from './Pages/Landing/Landing'
 // importing routers
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import SelfDirect from "./Pages/Landing/SelfDirect"
-import Subjects from "./Pages/Landing/Subjects"
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 // page for in the case of any errors
-import NoPage from './Pages/Landing/NoPage'
+import SelfDirect from "./Pages/Landing/SelfDirect"
+
+//import NoPage from './Pages/Landing/NoPage'
+import Subjects from './Pages/Landing/Subjects'
+
 
 function App() {
 
@@ -13,17 +15,25 @@ function App() {
     <>
       <div className='app-container'>
 
-        <BrowserRouter>
+        <Router>
           <Routes>
             <Route path = "/" element = {<Landing />} />
-            <Route path = "/Landing" element = {<Landing/>} />
-            <Route path = "/SelfDirect" element = {<SelfDirect/>} />
-            <Route path = "/Subjects" element = {<Subjects/>} />
-            <Route path = "*" element = {<NoPage />} />
+            <Route path = "/Subjects" element = {<Subjects />} />
+            <Route path = "/Self-Direct" element = {<SelfDirect/>} />
+            
           </Routes>
-        </BrowserRouter>
-        
+        </Router> 
 
+       {/* < Landing />
+        <Route path = "/Subjects" element = {<Subjects/>} />
+            <Route path = "*" element = {<NoPage />} />
+
+        <SelfDirect />
+
+        <NoPage />
+
+        <Subjects />*/}
+        
 
       </div>
     </>

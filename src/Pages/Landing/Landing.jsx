@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import {Link} from 'react-router-dom';
 import "./Landing.css";
 import NavBar from '../../Components/NavBar/NavBar';
 import SearchBox from '../../Components/SearchBox/SearchBox';
@@ -52,7 +53,8 @@ const Landing = () => {
               <div className='hero-section'>
                 <div>
                   <h4>Heading</h4>
-                  <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem vel laborum exercitationem quos. Placeat eum, tempore corporis illum repellendus modi, eius reprehenderit quibusdam tempora vel, natus labore non sed vero!</p>
+                 
+                
                 </div>
                 <img src="../../../public/assets/dog.svg" alt="" />
               </div>
@@ -66,7 +68,12 @@ const Landing = () => {
           </div>
 
           <div className='landing-more-info'>
-            <h2>paper</h2>
+            <h2>Platform</h2>
+            <ul>
+                  <li><Link to = "/Self-direct"> Self-direct learning</Link></li>
+                  <li><Link to = "/Subjects"> Subject</Link></li>
+                  
+            </ul>
             <h2>paper</h2>
             <h2>paper</h2>
           </div>
