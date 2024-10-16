@@ -124,7 +124,7 @@ const SideBar = () => {
             <Typography
               variant="h6"
               color={colors.navy[500]}
-              sx={{ m: "15px 0 5px 20px" }}
+              sx={{ m: "5px 0 5px 5px" }}
             >
               Go To
             </Typography>
@@ -160,7 +160,7 @@ const SideBar = () => {
             <Typography
               variant="h6"
               color={colors.navy[500]}
-              sx={{ m: "15px 0 5px 20px" }}
+              sx={{ m: "5px 0 5px 5px" }}
             >
               Educators
             </Typography>
@@ -175,7 +175,7 @@ const SideBar = () => {
             <Typography
               variant="h6"
               color={colors.navy[500]}
-              sx={{ m: "15px 0 5px 20px" }}
+              sx={{ m: "5px 0 5px 5px" }}
             >
               Moderators
             </Typography>
@@ -189,7 +189,7 @@ const SideBar = () => {
             <Typography
               variant="h6"
               color={colors.navy[500]}
-              sx={{ m: "15px 0 5px 20px" }}
+              sx={{ m: "5px 0 5px 5px" }}
             >
               Admins
             </Typography>

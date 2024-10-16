@@ -7,13 +7,13 @@ import SideBar from "./Components/SideBar/SideBar";
 import Dashboard from "./Pages/AdminPage/DashBoard/Dashboard";
 import Users from "./Pages/AdminPage/Users/Users";
 import Contributors from "./Pages/AdminPage/Users/Contributors";
-import TopBar from "./Pages/AdminPage/TopBar/TopBar";
 import "./App.css";
 import SignUp from "./Pages/SignUp/SignUp";
 import PasswordReset from "./Pages/PasswordReset/PasswordReset";
 import OER from "./Pages/OER/OER";
 import AboutUs from "./Pages/AboutUs/AboutUs";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import FAQ from "./Pages/AdminPage/FAQ/FAQ";
 //import Navigation from './Components/Navigation/Navigation';
 
 function App() {
@@ -34,6 +34,7 @@ function App() {
               <Route path="/reset-password" element={<PasswordReset />} />
               <Route path="/signUp" element={<SignUp />} />
               <Route path="/oer" element={<OER />} />
+              <Route path="/faq" element={<FAQ />} />
             </Routes>
           </div>
         </div>
