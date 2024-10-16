@@ -10,7 +10,7 @@ const NavBar = () => {
                 <h4 className='logo'>S2T</h4>
 
                 <ul>
-                    <li className='menu-item'>University</li>
+                    <li className='menu-item'>Primary School</li>
                     <li className='menu-item'>High School</li>
                 </ul>
                 
