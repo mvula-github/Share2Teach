@@ -144,7 +144,7 @@ const SideBar = () => {
             />
             <Item
               title="OER"
-              to="/invoices"
+              to="/oer"
               icon={<ReceiptOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}

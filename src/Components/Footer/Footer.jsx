@@ -10,7 +10,9 @@ const Footer = () => {
         <div className="footer-info">
           <h4>Logo</h4>
 
-          <button>login</button>
+          <Link to="/signUp">
+            <button>login</button>
+          </Link>
         </div>
 
         <div className="footer-info">
