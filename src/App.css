@@ -1,12 +1,11 @@
-.app-container{
-    max-width: 1300px !important;
-    margin: 0 auto;
-    position: relative;
+.app-container {
+  max-width: 100% !important;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media (max-width: 1300px) {
+  .app-container {
+    padding: 0 1.5rem;
   }
-  
-  @media (max-width: 1300px){
-    .app-container{
-      padding: 0 1.5rem;
-    }
-  }
-  
+}

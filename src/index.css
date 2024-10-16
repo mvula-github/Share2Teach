@@ -1,26 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
-*{
-  font-family:"Poppins", sans-serif;
+* {
+  font-family: "Poppins", sans-serif;
   margin: 0;
   box-sizing: border-box;
 }
 
-html{
+html {
   overflow-y: scroll;
+  height: 100%;
+  width: 100%;
 }
 
-body{
-  color: #112D4E;
+body {
+  color: #112d4e;
   background-color: #f3f3f3;
+  height: 100%;
+  width: 100%;
 }
 
-/*
+.app,
+.content {
+  height: 100%;
+  width: 100%;
+}
+
+.app {
+  display: flex;
+  position: relative;
+}
+
 ::-webkit-scrollbar {
   width: 15px;
 }
 
-::-webkit-scrollbar-thumb {
-  background: rgb(221, 221, 221);
+/* TRACK */
+::-webkit-scrollbar-track {
+  background: #f3f3f3;
 }
-*/
+
+/* THUMB */
+
+::-webkit-scrollbar-thumb {
+  background: #112d4e;
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: #dbe2ef;
+}
