@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -20,7 +21,9 @@ const Footer = () => {
               <li className="footer-item">learn more</li>
             </a>
             <a href="#">
-              <li className="footer-item">apply</li>
+              <Link to="/signup">
+                <li>apply</li>
+              </Link>{" "}
             </a>
           </ul>
         </div>
@@ -30,10 +33,14 @@ const Footer = () => {
 
           <ul>
             <a href="#">
-              <li className="footer-item">about us</li>
+              <li>
+                <Link to="/about-us">about us</Link>
+              </li>
             </a>
             <a href="#">
-              <li className="footer-item">contact us</li>
+              <li>
+                <Link to="/oer">OER</Link>
+              </li>
             </a>
             <a href="#">
               <li className="footer-item">self-directed learning</li>
