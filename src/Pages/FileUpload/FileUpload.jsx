@@ -6,9 +6,6 @@ import "./FileUpload.css";
 import mockData from "./mockData.json"; // Import mock data
 import categoriesData from "./CategoriesData.json"; // Import categories data
 
-/*const subjects = ["Math", "Science", "History"]; // Example subjects
-const grades = ["Grade R", "Grade 1", "Grade 2", "Grade 3", "Grade 4", "Grade 5", "Grade 6", "Grade 7", "Grade 8", "Grade 9", "Grade 10", "Grade 11", "Grade 12"]; // Example grades
-*/
 function FileUpload({ accept = "", onSelectFile, onDeleteFile, disabled }) {
   const hiddenFileInput = useRef(null);
   const [file, setFile] = useState(null);
@@ -24,36 +21,14 @@ function FileUpload({ accept = "", onSelectFile, onDeleteFile, disabled }) {
   const [errors, setErrors] = useState({});
 
   useEffect(() => {
-    //fetchSubjects();
-    //fetchGrades();
-
-    // Use mock data for subjects and grades
     setSubjects(mockData.subjects);
     setGrades(mockData.grades);
     setCategories(categoriesData.categories); // Set categories from JSON data
+    //fetchSubjects();
+    //fetchGrades();
+    //fetchCategories();
   }, []);
 
-  /*
-  const fetchSubjects = async () => {
-    try {
-      const response = await fetch("/api/subjects");
-      const data = await response.json();
-      setSubjects(data);
-    } catch (error) {
-      console.error("Error fetching subjects:", error);
-    }
-  };
-
-  const fetchGrades = async () => {
-    try {
-      const response = await fetch("/api/grades");
-      const data = await response.json();
-      setGrades(data);
-    } catch (error) {
-      console.error("Error fetching grades:", error);
-    }
-  };
-*/
   const handleClick = () => {
     hiddenFileInput.current.click();
   };

@@ -11,11 +11,11 @@ function FAQ() {
 
   useEffect(() => {
     // Fetch FAQs from the API
-    /**axios.get('/api/faqs')
+    /*axios.get('/api/faqs')
       .then(response => setFaqs(response.data))
       .catch(error => console.error('Error fetching FAQs:', error));
-      */
-
+      
+    */
     // Use mock data for testing
     setFaqs(mockFAQs);
   }, []);
@@ -37,7 +37,7 @@ function FAQ() {
               ))}
             </Collapse>
           </div>
-        ))}S
+        ))}
         <div className="quickSupport">
           <h3>Want quick support?</h3>
           <p>Get quick support 24/7 with our dedicated users service team. We are here to help you get resources, answer any questions, and resolve any issues. Trust us to make your experience stress-free and enjoyable.</p>

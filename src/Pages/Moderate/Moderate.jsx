@@ -10,8 +10,8 @@ function Moderate() {
   const [comments, setComments] = useState({});
 
   useEffect(() => {
-    //fetchFiles();
-    setFiles(mockFiles);
+    fetchFiles();
+    //setFiles(mockFiles);
   }, []);
 
   const fetchFiles = async () => {

@@ -30,9 +30,10 @@ function App() {
                 onSelectFile={handleSelectFile}
                 onDeleteFile={handleDeleteFile}
                 disabled={false} 
-        />*/}
+        />
+        */}
 
-        {/*<Moderate/>*/}
+        <Moderate/>
 
       </div>
     </>
