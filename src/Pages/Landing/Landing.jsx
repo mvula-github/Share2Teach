@@ -13,7 +13,7 @@ const Landing = () => {
       {/* --------------------------------------------------------------------------- */}
       <NavBar />
       <div className="landing-top-section">
-        <h1 className="usp-heading">Share to Inspire</h1>
+        <h1 className="usp-heading">Share and Inspire</h1>
         <p className="usp-text">
           Your one-stop spot for highend quality education resources
         </p>

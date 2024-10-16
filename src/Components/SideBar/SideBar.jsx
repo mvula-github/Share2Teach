@@ -5,7 +5,8 @@ import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
 import "react-pro-sidebar/dist/css/styles.css";
-import { tokens } from "../../theme";
+import { useContext } from "react";
+import { ColorModeContext, tokens } from "../../theme";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
@@ -18,6 +19,9 @@ import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
+import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
+import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
@@ -40,6 +44,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
 const SideBar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const colorMode = useContext(ColorModeContext);
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selected, setSelected] = useState("Dashboard");
 
@@ -70,44 +75,38 @@ const SideBar = () => {
             onClick={() => setIsCollapsed(!isCollapsed)}
             icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
             style={{
-              margin: "10px 0 20px 0",
+              margin: "0px 0 5px 0",
               color: colors.navy[500],
             }}
           >
             {!isCollapsed && (
-              <Box
-                display="flex"
-                justifyContent="space-between"
-                alignItems="center"
-                ml="10px"
-              >
-                <Typography
-                  variant="h4"
-                  fontWeight="bold"
-                  color={colors.navy[500]}
-                >
-                  Share2teach
-                </Typography>
+              <Box display="flex" justifyContent="center" alignItems="center">
                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
                   <MenuOutlinedIcon />
                 </IconButton>
               </Box>
             )}
+            <Box display="flex" justifyContent="center">
+              <IconButton onClick={colorMode.toggleColorMode}>
+                {theme.palette.mode === "dark" ? (
+                  <DarkModeOutlinedIcon />
+                ) : (
+                  <LightModeOutlinedIcon />
+                )}
+              </IconButton>
+            </Box>
           </MenuItem>
           {/* Username section with the user role */}
           {!isCollapsed && (
-            <Box mb="20px">
+            <Box mb="0 20px">
               <Box textAlign="center">
                 <Typography
-                  variant="h2"
-                  color={colors.navy[500]}
+                  variant="h4"
+                  m="5px"
                   fontWeight="bold"
-                  sx={{ m: "10px 0 0 0" }}
+                  color={colors.navy[500]}
                 >
-                  John Doe
-                </Typography>
-                <Typography variant="h5" color={colors.navy[500]}>
-                  Admin
+                  Share2teach
                 </Typography>
               </Box>
             </Box>
@@ -116,7 +115,7 @@ const SideBar = () => {
           <Box paddingLeft={isCollapsed ? undefined : "10%"}>
             <Item
               title="Home"
-              to="/Landing"
+              to="/home"
               icon={<HomeOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -217,7 +216,7 @@ const SideBar = () => {
             />
             <Item
               title="View Contributors"
-              to="/pie"
+              to="/contributors"
               icon={<PieChartOutlineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}

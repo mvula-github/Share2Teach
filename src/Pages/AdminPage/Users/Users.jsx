@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { Box, Typography, useTheme } from "@mui/material";
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { tokens } from "../../../theme";
 import { mockDataTeam } from "../../../Utilities/mockData";
 import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettingsOutlined";
@@ -75,7 +75,7 @@ const Users = () => {
       <Header title="Users" subtitle="Managing the Users" />
       <Box
         m="40px 0 0 0"
-        height="75vh"
+        height="90vh"
         sx={{
           "& .MuiDataGrid-root": {
             border: "none",
@@ -106,9 +106,17 @@ const Users = () => {
           "& .MuiCheckbox-root": {
             color: `${colors.blue[400]} !important`,
           },
+          "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
+            color: `${colors.sky[500]} !important`,
+          },
         }}
       >
-        <DataGrid checkboxSelection rows={mockDataTeam} columns={columns} />
+        <DataGrid
+          checkboxSelection
+          rows={mockDataTeam}
+          columns={columns}
+          components={{ Toolbar: GridToolbar }}
+        />
       </Box>
     </Box>
   );

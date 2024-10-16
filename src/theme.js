@@ -56,7 +56,7 @@ export const tokens = (mode) => ({
       }
     : {
         blue: {
-          900: "#0d1723",
+          900: "#dbe2ef",
           800: "#192e46",
           700: "#264469",
           600: "#325b8c",
@@ -64,7 +64,7 @@ export const tokens = (mode) => ({
           400: "#658ebf",
           300: "#8caacf",
           200: "#b2c7df",
-          100: "#d9e3ef",
+          100: "#dbe2ef",
         },
         sky: {
           900: "#2c2d30",
