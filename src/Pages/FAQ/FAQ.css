@@ -1,66 +1,74 @@
-.faq-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-  }
-  
-  .search-bar {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-  }
-  
-  .faq-category {
-    margin-bottom: 20px;
-  }
-  
-  .faq-category h3 {
-    margin-bottom: 10px;
-    font-size: 1.5em;
-    color: #333;
-  }
-  
-  .faq-item {
-    margin-bottom: 10px;
-  }
-  
-  .faq-question {
-    cursor: pointer;
-    font-weight: bold;
-    color: #007BFF;
-  }
-  
-  .faq-answer {
-    margin-top: 5px;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-  }
-  
-  .helpful-buttons {
-    margin-top: 10px;
-  }
-  
-  .helpful-buttons span {
-    margin-right: 10px;
-  }
-  
-  .helpful-buttons button {
-    margin-right: 5px;
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .helpful-buttons button:hover {
-    background-color: #ddd;
-  }
-  
-  .faq-container p {
-    margin-top: 20px;
-    font-size: 0.9em;
-    color: #666;
-  }
-  
+
+.faqs {
+  padding: 20px;
+  background-color: #DBE2EF;
+}
+
+.container-fluid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.titleHolder {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.titleHolder h2 {
+  font-size: 2.5em;
+  color: #3F72AF;
+}
+
+.faqCategory {
+  margin-bottom: 20px;
+}
+
+.faqCategory h3 {
+  font-size: 1.5em;
+  color: #3F72AF;
+  margin-bottom: 10px;
+}
+
+.ant-collapse-header {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.ant-collapse-content p {
+  font-size: 1em;
+  color: #666;
+}
+
+.quickSupport {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #3F72AF;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.quickSupport h3 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.quickSupport p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.quickSupport .ant-btn-primary {
+  background-color: #112d41;
+  border-color: #112d41;
+  font-size: 1.2em;
+}
+
+.quickSupport .ant-btn-primary:hover {
+  background-color: #0a1e2b;
+  border-color: #0a1e2b;
+}

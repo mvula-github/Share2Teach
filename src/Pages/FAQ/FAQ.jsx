@@ -1,100 +1,51 @@
-import React, { useState, useEffect } from 'react';
-import mockFAQs from './mockFAQs';
-//import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { Collapse, Button } from 'antd';
+import mockFAQs from './mockFAQs'; // Import the mock JSON File
+import './FAQ.css'; // Import the CSS file
 
-const FAQItem = ({ faq, index, category, activeIndex, toggleFAQ, handleHelpful, helpful }) => (
-  <div key={index}>
-    <h4 onClick={() => toggleFAQ(index, category)} style={{ cursor: 'pointer' }}>
-      {faq.question}
-    </h4>
-    {activeIndex === `${category}-${index}` && (
-      <div>
-        <p>{faq.answer}</p>
-        <div>
-          <span>Was this helpful?</span>
-          <button onClick={() => handleHelpful(index, category, true)}>Yes</button>
-          <button onClick={() => handleHelpful(index, category, false)}>No</button>
-          {helpful[`${category}-${index}`] !== undefined && (
-            <span>{helpful[`${category}-${index}`] ? 'Thank you!' : 'Sorry to hear that.'}</span>
-          )}
-        </div>
-      </div>
-    )}
-  </div>
-);
+const { Panel } = Collapse;
 
-const FAQCategory = ({ category, faqs, activeIndex, toggleFAQ, handleHelpful, helpful }) => (
-  <div>
-    <h3>{category.replace(/^\w/, c => c.toUpperCase())}</h3>
-    {faqs.map((faq, index) => (
-      <FAQItem
-        key={index}
-        faq={faq}
-        index={index}
-        category={category}
-        activeIndex={activeIndex}
-        toggleFAQ={toggleFAQ}
-        handleHelpful={handleHelpful}
-        helpful={helpful}
-      />
-    ))}
-  </div>
-);
-
-const FAQ = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [helpful, setHelpful] = useState({});
-  const [faqs, setFaqs] = useState({});
+function FAQ() {
+  const [faqs, setFaqs] = useState([]);
 
   useEffect(() => {
-    // Using mock data for testing
+    // Fetch FAQs from the API
+    /**axios.get('/api/faqs')
+      .then(response => setFaqs(response.data))
+      .catch(error => console.error('Error fetching FAQs:', error));
+      */
+
+    // Use mock data for testing
     setFaqs(mockFAQs);
   }, []);
 
-  const toggleFAQ = (index, category) => {
-    setActiveIndex(activeIndex === `${category}-${index}` ? null : `${category}-${index}`);
-  };
-
-  const handleHelpful = (index, category, value) => {
-    setHelpful({ ...helpful, [`${category}-${index}`]: value });
-  };
-
-  const filteredFAQs = Object.keys(faqs).reduce((acc, category) => {
-    acc[category] = faqs[category].filter(faq =>
-      faq.question.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    return acc;
-  }, {});
-
   return (
-    <div>
-      <h2>Frequently Asked Questions</h2>
-      <input
-        type="text"
-        placeholder="Search questions..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
-      {Object.keys(filteredFAQs).map((category, catIndex) => (
-        <FAQCategory
-          key={catIndex}
-          category={category}
-          faqs={filteredFAQs[category]}
-          activeIndex={activeIndex}
-          toggleFAQ={toggleFAQ}
-          handleHelpful={handleHelpful}
-          helpful={helpful}
-        />
-      ))}
-      <div>
-        <p>Didn’t find what you were looking for? <a href="/contact">Contact us!</a></p>
-      </div>
-      <div>
-        <p>Last Updated: December 26, 2024</p>
+    <div id="faq" className="faqs">
+      <div className="container-fluid">
+        <div className="titleHolder">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+        {faqs.map((category, index) => (
+          <div key={index} className="faqCategory">
+            <h3>{category.category}</h3>
+            <Collapse defaultActiveKey={['0']}>
+              {category.questions.map((faq, idx) => (
+                <Panel header={faq.question} key={idx}>
+                  <p>{faq.answer}</p>
+                </Panel>
+              ))}
+            </Collapse>
+          </div>
+        ))}S
+        <div className="quickSupport">
+          <h3>Want quick support?</h3>
+          <p>Get quick support 24/7 with our dedicated users service team. We are here to help you get resources, answer any questions, and resolve any issues. Trust us to make your experience stress-free and enjoyable.</p>
+          <Button type="primary" size="large" href="mailto:s2t@nwu.ac.za"><i className="fas fa-envelope"></i> Email your question</Button>
+        </div>
       </div>
     </div>
   );
-};
+}
 
 export default FAQ;

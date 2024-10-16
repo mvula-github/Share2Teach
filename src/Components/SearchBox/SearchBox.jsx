@@ -7,7 +7,7 @@ const SearchBox = () => {
     <>
     <div className='search-box-container'>
         <form>
-            <input type="text" name="search-query" placeholder='Search for modules, topics, or documents'/>
+            <input type="text" name="search-query" placeholder='Search for subjects, topics, or documents'/>
             <button>Search</button>
         </form>
         
