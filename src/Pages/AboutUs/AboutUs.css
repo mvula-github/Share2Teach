@@ -3,13 +3,17 @@
   text-align: center;
 }
 
+h3 {
+  color: #333;
+}
+
 .title {
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
 .description {
-  margin-bottom: 40px;
+  margin: 40px 150px;
 }
 
 .founders {
@@ -17,6 +21,11 @@
   justify-content: center;
   gap: 40px;
   margin-bottom: 50px;
+}
+
+.founders-title {
+  margin: 50px 150px;
+  font-size: 25px;
 }
 
 .founder-bubble {
@@ -30,6 +39,7 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+  gap: 0.5rem;
 }
 
 .founder-img {
@@ -47,6 +57,53 @@
 }
 
 .founder-bio {
+  font-size: 0.8rem;
+  color: #333;
+}
+
+/* --------------- */
+
+.developer {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.development-title {
+  margin: 50px 150px;
+  font-size: 25px;
+}
+
+.developer-bubble {
+  background-color: #f0f4f8; /* Light grey/blue background */
+  border-radius: 20px; /* Rounded rectangle effect */
+  padding: 20px;
+  width: 220px; /* Adjust width for a more rectangular shape */
+  height: 300px; /* Adjust height for a more rectangular shape */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+  gap: 0.5rem;
+}
+
+.developer-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Image remains circular */
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.developer-role {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.developer-bio {
   font-size: 0.8rem;
   color: #333;
 }
