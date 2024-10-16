@@ -1,82 +1,56 @@
-/* Basic page container */ 
 .about-container {
-    padding: 20px;
-    background-color: white;
-    color: #333;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /* Title styles */
-  .title {
-    font-size: 2.5rem;
-    color: #1E90FF;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  /* Description text */
-  .description {
-    font-size: 1.2rem;
-    text-align: center;
-    margin-bottom: 40px;
-    color: #555;
-  }
-  
-  /* Founders section */
-  .founders-title {
-    font-size: 2rem;
-    color: #1E90FF;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .founders {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  
-  /* Founder card styles */
-  .founder-card {
-    background-color: #f0f8ff;
-    border-radius: 8px;
-    padding: 20px;
-    width: 300px;
-    margin: 15px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-  }
-  
-  .founder-card:hover {
-    transform: translateY(-10px);
-  }
-  
-  .founder-img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    margin-bottom: 15px;
-  }
-  
-  .founder-role {
-    font-weight: bold;
-    color: #1E90FF;
-  }
-  
-  .founder-bio {
-    font-size: 1rem;
-    color: #333;
-    margin-top: 10px;
-  }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .founders {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-  
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.description {
+  margin-bottom: 40px;
+}
+
+.founders {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.founder-bubble {
+  background-color: #f0f4f8; /* Light grey/blue background */
+  border-radius: 20px; /* Rounded rectangle effect */
+  padding: 20px;
+  width: 220px; /* Adjust width for a more rectangular shape */
+  height: 300px; /* Adjust height for a more rectangular shape */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+.founder-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Image remains circular */
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.founder-role {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.founder-bio {
+  font-size: 0.8rem;
+  color: #333;
+}
+
+.back-link {
+  margin-top: 40px;
+}
