@@ -73,10 +73,7 @@ const Landing = () => {
             <h4>Logo</h4>
               
             <button>login</button>
-          {/* Link to Sign Up page */}
-          <p>
-            Don't have an account? <Link to="/signup">Sign Up</Link>
-          </p>
+          
           </div>
 
           <div>
@@ -84,7 +81,7 @@ const Landing = () => {
 
             <ul>
               <a href="#"><li>learn more</li></a>
-              <a href="#"><li>apply</li></a>
+              <Link to="/signup"><li>apply</li></Link>  {/* Direct link to Sign-Up */}
             </ul>
 
           </div>

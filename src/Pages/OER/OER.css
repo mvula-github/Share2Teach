@@ -1,74 +1,51 @@
 .oer-container {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
+    text-align: center;
 }
 
-.upload-section {
-    margin-bottom: 30px;
-}
-
-.upload-form {
+.resource-grid {
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+    margin: 20px 0;
 }
 
-.upload-form label {
-    margin: 10px 0;
-}
-
-.upload-form input[type="text"],
-.upload-form input[type="file"] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.upload-form button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.upload-form button:hover {
-    background-color: #0056b3;
-}
-
-.papers-list {
-    margin-top: 20px;
-}
-
-.papers-list h2 {
-    margin-bottom: 10px;
-}
-
-.papers-list input[type="text"] {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.papers-list ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.papers-list li {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 10px;
-}
-
-.papers-list a {
+.resource-card {
+    background-color: #f0f4ff;
+    border-radius: 20px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
     text-decoration: none;
-    color: #007bff;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.papers-list a:hover {
-    text-decoration: underline;
+.resource-card:hover {
+    transform: scale(1.05);
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.tutorials-icon {
+    background: url('/path/to/tutorials-icon.png') no-repeat center center;
+    background-size: contain;
+}
+
+.authors-icon {
+    background: url('/path/to/authors-icon.png') no-repeat center center;
+    background-size: contain;
+}
+
+.guides-icon {
+    background: url('/path/to/guides-icon.png') no-repeat center center;
+    background-size: contain;
+}
+
+/* Style the upload section */
+.upload-section {
+    margin: 40px 0;
 }
