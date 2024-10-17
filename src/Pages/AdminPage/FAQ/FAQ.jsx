@@ -15,7 +15,10 @@ const FAQ = () => {
 
   return (
     <Box m="20px">
-      <Header title="CREATE USER" subtitle="Create a New User Profile" />
+      <Header
+        title="Manage FAQs"
+        subtitle="add, update, and remove your FAQs"
+      />
 
       <Formik
         onSubmit={handleFormSubmit}
@@ -47,11 +50,12 @@ const FAQ = () => {
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.category}
-                name="Category"
-                error={!!touched.firstName && !!errors.firstName}
-                helperText={touched.firstName && errors.firstName}
+                name="category"
+                error={!!touched.category && !!errors.category}
+                helperText={touched.category && errors.category}
                 sx={{ gridColumn: "span 2" }}
               />
+
               <TextField
                 fullWidth
                 variant="filled"
@@ -60,9 +64,9 @@ const FAQ = () => {
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.question}
-                name="Question"
-                error={!!touched.lastName && !!errors.lastName}
-                helperText={touched.lastName && errors.lastName}
+                name="question"
+                error={!!touched.question && !!errors.question}
+                helperText={touched.question && errors.question}
                 sx={{ gridColumn: "span 3" }}
               />
               <TextField
@@ -73,15 +77,21 @@ const FAQ = () => {
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.answer}
-                name="Answer"
-                error={!!touched.email && !!errors.email}
-                helperText={touched.email && errors.email}
+                name="answer"
+                error={!!touched.answer && !!errors.answer}
+                helperText={touched.answer && errors.answer}
                 sx={{ gridColumn: "span 4" }}
               />
             </Box>
-            <Box display="flex" justifyContent="end" mt="20px">
+            <Box display="flex" gap="1.5rem" justifyContent="end" m="20px">
               <Button type="submit" color="secondary" variant="contained">
-                Create New User
+                New
+              </Button>
+              <Button type="submit" color="secondary" variant="contained">
+                Update
+              </Button>
+              <Button type="submit" color="secondary" variant="contained">
+                Delete
               </Button>
             </Box>
           </form>
@@ -92,19 +102,14 @@ const FAQ = () => {
 };
 
 const checkoutSchema = yup.object().shape({
-  firstName: yup.string().required("required"),
-  lastName: yup.string().required("required"),
-  email: yup.string().email("invalid email").required("required"),
-  address1: yup.string().required("required"),
-  address2: yup.string().required("required"),
+  category: yup.string().required("required"),
+  question: yup.string().required("required"),
+  answer: yup.string().required("required"),
 });
 const initialValues = {
-  firstName: "",
-  lastName: "",
-  email: "",
-  contact: "",
-  address1: "",
-  address2: "",
+  category: "",
+  question: "",
+  answer: "",
 };
 
 // eslint-disable-next-line react-refresh/only-export-components
