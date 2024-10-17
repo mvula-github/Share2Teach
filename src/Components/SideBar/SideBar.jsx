@@ -209,7 +209,7 @@ const SideBar = () => {
             />
             <Item
               title="Manage FAQs"
-              to="/faq"
+              to="/managefaq"
               icon={<HelpOutlineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
