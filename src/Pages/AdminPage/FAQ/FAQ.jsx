@@ -15,7 +15,7 @@ const FAQ = () => {
 
   return (
     <Box m="20px">
-      <Header title="CREATE USER" subtitle="Create a New User Profile" />
+      <Header title="Manage FAQs" subtitle="Add, update, or delete FAQs" />
 
       <Formik
         onSubmit={handleFormSubmit}
@@ -34,7 +34,7 @@ const FAQ = () => {
             <Box
               display="grid"
               gap="30px"
-              gridTemplateColumns="repeat(4, minmax(0, 1fr))"
+              gridTemplateColumns="repeat(5, minmax(0, 1fr))"
               sx={{
                 "& > div": { gridColumn: isNonMobile ? undefined : "span 4" },
               }}
@@ -70,18 +70,20 @@ const FAQ = () => {
                 variant="filled"
                 type="text"
                 label="Answer"
+                multiline
+                rows={4}
                 onBlur={handleBlur}
                 onChange={handleChange}
                 value={values.answer}
                 name="Answer"
                 error={!!touched.email && !!errors.email}
                 helperText={touched.email && errors.email}
-                sx={{ gridColumn: "span 4" }}
+                sx={{ gridColumn: "span 5" }}
               />
             </Box>
             <Box display="flex" justifyContent="end" mt="20px">
               <Button type="submit" color="secondary" variant="contained">
-                Create New User
+                Add
               </Button>
             </Box>
           </form>
