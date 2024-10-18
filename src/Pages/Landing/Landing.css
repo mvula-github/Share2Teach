@@ -1,3 +1,7 @@
+landing-page {
+  width: 100%;
+}
+
 .landing-top-section {
   padding: 10px 0;
   margin: 40px auto 150px auto;
@@ -119,8 +123,6 @@
 /* _+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_ */
 
 .landing-footer-info {
-  background-color: #112d41;
-  color: #dbe2ef;
   display: flex;
   justify-content: space-between;
   padding: 10px 40px;
@@ -155,7 +157,7 @@
 }
 
 /*-----------------------------------------------------------------------------------------*/
-.copyright-section h4 {
+.copyright-section {
   text-align: center;
   color: #112d41;
   margin: 10px;
@@ -163,7 +165,7 @@
 }
 
 /* ***********************************************************************************  */
-@media (max-width: 769px) {
+@media (max-width: 800px) {
   .top-section h1 {
     font-size: 40px;
     font-weight: 750;
@@ -207,6 +209,21 @@
   }
   .hero-section p {
     font-size: 12px;
+  }
+
+  .landing-botton-section {
+    width: 80%;
+  }
+
+  .landing-footer-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 45px;
+  }
+
+  .footer-info {
+    margin: 25px 40px;
+    padding: 20px 0;
   }
 
   .footer-info h4 {
@@ -283,6 +300,10 @@
   .hero-section p {
     font-size: 10px;
     text-align: center;
+  }
+
+  .landing-botton-section {
+    width: 80%;
   }
 
   .footer-info h4 {
