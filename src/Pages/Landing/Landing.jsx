@@ -88,6 +88,7 @@ const Landing = () => {
               revolutionize your classes
             </p>
           </div>
+
           <Footer />
         </div>
       </div>

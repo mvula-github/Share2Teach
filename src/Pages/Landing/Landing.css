@@ -108,7 +108,6 @@ landing-page {
 .landing-teacher-info {
   padding: 5rem;
   margin: 40px auto;
-  color: #112d41;
 }
 
 .landing-teacher-info h1 {
@@ -126,6 +125,7 @@ landing-page {
   display: flex;
   justify-content: space-between;
   padding: 10px 40px;
+  border: 2px solid #dbe2ef;
 }
 
 .footer-info {
@@ -159,9 +159,8 @@ landing-page {
 /*-----------------------------------------------------------------------------------------*/
 .copyright-section {
   text-align: center;
-  color: #112d41;
   margin: 10px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 /* ***********************************************************************************  */

@@ -39,8 +39,6 @@
   } */
 
 .landing-footer-info {
-  background-color: #112d41;
-  color: #dbe2ef;
   display: flex;
   justify-content: space-between;
   padding: 10px 40px;

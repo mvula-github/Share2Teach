@@ -22,6 +22,7 @@
 
 .nav-content h4 {
   margin: 5px 15px;
+  color: #112d4e;
 }
 
 .nav-content ul {
@@ -72,6 +73,10 @@
   .logo {
     margin-left: 20px;
     height: auto;
+  }
+
+  .nav-content {
+    max-width: 65vh;
   }
 
   .nav-content ul {
