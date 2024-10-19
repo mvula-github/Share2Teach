@@ -10,18 +10,19 @@ import { ColorModeContext, tokens } from "../../theme";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
-import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
-import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
-import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
-import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
-import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutlined";
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
-import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
-import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+import {
+  ChecklistOutlined,
+  DashboardOutlined,
+  FileUploadOutlined,
+  LibraryBooksOutlined,
+  LocalLibraryOutlined,
+  SchoolOutlined,
+} from "@mui/icons-material";
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
@@ -57,9 +58,9 @@ const SideBar = () => {
         "& .pro-icon-wrapper": {
           backgroundColor: "transparent !important",
         },
-        "& .pro-inner-item": {
-          padding: "2px 30px 5px 20px !important",
-        },
+        // "& .pro-inner-item": {
+        //   marginLeft: "-10px !important",
+        // },
         "& .pro-inner-item:hover": {
           color: "#868dfb !important",
         },
@@ -125,27 +126,28 @@ const SideBar = () => {
               variant="h6"
               color={colors.navy[500]}
               sx={{ m: "5px 0 5px 5px" }}
+              display={!isCollapsed ? undefined : "none"}
             >
               Go To
             </Typography>
             <Item
               title="Subjects"
               to="/team"
-              icon={<PeopleOutlinedIcon />}
+              icon={<LibraryBooksOutlined />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
               title="Self-Directed Learning"
               to="/contacts"
-              icon={<ContactsOutlinedIcon />}
+              icon={<SchoolOutlined />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
               title="OER"
               to="/oer"
-              icon={<ReceiptOutlinedIcon />}
+              icon={<LocalLibraryOutlined />}
               selected={selected}
               setSelected={setSelected}
             />
@@ -161,13 +163,14 @@ const SideBar = () => {
               variant="h6"
               color={colors.navy[500]}
               sx={{ m: "5px 0 5px 5px" }}
+              display={!isCollapsed ? undefined : "none"}
             >
               Educators
             </Typography>
             <Item
               title="Contribute"
               to="/form"
-              icon={<PersonOutlinedIcon />}
+              icon={<FileUploadOutlined />}
               selected={selected}
               setSelected={setSelected}
             />
@@ -176,13 +179,14 @@ const SideBar = () => {
               variant="h6"
               color={colors.navy[500]}
               sx={{ m: "5px 0 5px 5px" }}
+              display={!isCollapsed ? undefined : "none"}
             >
               Moderators
             </Typography>
             <Item
               title="Moderate"
               to="/bar"
-              icon={<BarChartOutlinedIcon />}
+              icon={<ChecklistOutlined />}
               selected={selected}
               setSelected={setSelected}
             />
@@ -190,20 +194,21 @@ const SideBar = () => {
               variant="h6"
               color={colors.navy[500]}
               sx={{ m: "5px 0 5px 5px" }}
+              display={!isCollapsed ? undefined : "none"}
             >
               Admins
             </Typography>
             <Item
               title="Dashboard"
               to="/dashboard"
-              icon={<CalendarTodayOutlinedIcon />}
+              icon={<DashboardOutlined />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
               title="Manage Users"
               to="/users"
-              icon={<CalendarTodayOutlinedIcon />}
+              icon={<PeopleOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
@@ -217,7 +222,7 @@ const SideBar = () => {
             <Item
               title="View Contributors"
               to="/contributors"
-              icon={<PieChartOutlineOutlinedIcon />}
+              icon={<ContactsOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />

@@ -48,13 +48,19 @@ form button:hover {
 
 @media (max-width: 769px) {
   form input {
-    width: 75vh;
+    width: 55vh;
     height: 2rem;
     font-size: 10px;
   }
 
   form input:hover {
-    width: 90vh;
+    width: 65vh;
+  }
+
+  form button {
+    width: 5rem;
+    height: 2rem;
+    font-size: 10px;
   }
 }
 
@@ -63,5 +69,9 @@ form button:hover {
     width: 40vh;
     height: 2rem;
     font-size: 10px;
+  }
+
+  form input:hover {
+    width: 50vh;
   }
 }
