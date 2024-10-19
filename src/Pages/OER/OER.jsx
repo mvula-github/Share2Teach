@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom"; // For navigation
 import "./OER.css";
+import Header from "../AdminPage/Header";
 
 const OER = () => {
   const [refresh, setRefresh] = useState(false);
@@ -32,7 +33,12 @@ const OER = () => {
 
   return (
     <div className="oer-container">
-      <h1>Open Educational Resources (OER)</h1>
+      <div className="the-header">
+        <Header
+          title="Other Educational Resources"
+          subtitle="get extra resources"
+        />
+      </div>
       <div className="resource-grid">
         {/* Tutorials Section */}
         <Link to="/tutorials" className="resource-card">

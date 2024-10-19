@@ -1,51 +1,55 @@
 .oer-container {
-    text-align: center;
+  text-align: center;
 }
 
+.the-header {
+  margin: 30px;
+  text-align: left;
+}
 .resource-grid {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px 0;
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
 }
 
 .resource-card {
-    background-color: #f0f4ff;
-    border-radius: 20px;
-    padding: 20px;
-    width: 200px;
-    text-align: center;
-    text-decoration: none;
-    color: #333;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+  background-color: #f0f4ff;
+  border-radius: 20px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .resource-card:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .icon {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
 }
 
 .tutorials-icon {
-    background: url('/path/to/tutorials-icon.png') no-repeat center center;
-    background-size: contain;
+  background: url("/path/to/tutorials-icon.png") no-repeat center center;
+  background-size: contain;
 }
 
 .authors-icon {
-    background: url('/path/to/authors-icon.png') no-repeat center center;
-    background-size: contain;
+  background: url("/path/to/authors-icon.png") no-repeat center center;
+  background-size: contain;
 }
 
 .guides-icon {
-    background: url('/path/to/guides-icon.png') no-repeat center center;
-    background-size: contain;
+  background: url("/path/to/guides-icon.png") no-repeat center center;
+  background-size: contain;
 }
 
 /* Style the upload section */
 .upload-section {
-    margin: 40px 0;
+  margin: 40px 0;
 }
