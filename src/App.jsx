@@ -17,7 +17,6 @@ import ManageFAQ from "./Pages/AdminPage/FAQ/FAQ";
 import FileUpload from "./Pages/FileUpload/FileUpload";
 import Moderate from "./Pages/Moderate/Moderate";
 import FAQ from "./Pages/FAQ/FAQ";
-//import Navigation from './Components/Navigation/Navigation';
 
 function App() {
   const [theme, colorMode] = useMode();

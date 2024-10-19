@@ -1,5 +1,12 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
-import { IconButton, TextField, Card, CardContent, Typography } from "@mui/material";
+import {
+  IconButton,
+  TextField,
+  Card,
+  CardContent,
+  Typography,
+} from "@mui/material";
 import CheckIcon from "@mui/icons-material/Check";
 import CloseIcon from "@mui/icons-material/Close";
 import "./Moderate.css";
@@ -11,7 +18,7 @@ function Moderate() {
 
   useEffect(() => {
     fetchFiles();
-    //setFiles(mockFiles);
+    setFiles(mockFiles);
   }, []);
 
   const fetchFiles = async () => {
@@ -19,7 +26,7 @@ function Moderate() {
       const response = await fetch("/api/files");
       const data = await response.json();
       // Filter files that need moderation (not approved)
-      const filesToModerate = data.filter(file => !file.approved);
+      const filesToModerate = data.filter((file) => !file.approved);
       setFiles(filesToModerate);
     } catch (error) {
       console.error("Error fetching files:", error);
@@ -73,7 +80,9 @@ function Moderate() {
             <Typography variant="body2">Grade: {file.grade}</Typography>
             <Typography variant="body2">Year: {file.year}</Typography>
             <Typography variant="body2">Category: {file.category}</Typography>
-            <Typography variant="body2">Description: {file.description}</Typography>
+            <Typography variant="body2">
+              Description: {file.description}
+            </Typography>
             <a href={`/${file.userFile}`} download>
               Download File
             </a>
@@ -87,10 +96,16 @@ function Moderate() {
               margin="normal"
             />
             <div className="action-buttons">
-              <IconButton color="primary" onClick={() => handleApprove(file._id)}>
+              <IconButton
+                color="primary"
+                onClick={() => handleApprove(file._id)}
+              >
                 <CheckIcon />
               </IconButton>
-              <IconButton color="secondary" onClick={() => handleDisapprove(file._id)}>
+              <IconButton
+                color="secondary"
+                onClick={() => handleDisapprove(file._id)}
+              >
                 <CloseIcon />
               </IconButton>
             </div>
