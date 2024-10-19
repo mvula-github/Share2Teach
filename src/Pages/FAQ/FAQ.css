@@ -1,7 +1,6 @@
-
 .faqs {
   padding: 20px;
-  background-color: #DBE2EF;
+  margin: 50px 30px;
 }
 
 .container-fluid {
@@ -20,7 +19,7 @@
 
 .titleHolder h2 {
   font-size: 2.5em;
-  color: #3F72AF;
+  color: #3f72af;
 }
 
 .faqCategory {
@@ -29,7 +28,7 @@
 
 .faqCategory h3 {
   font-size: 1.5em;
-  color: #3F72AF;
+  color: #3f72af;
   margin-bottom: 10px;
 }
 
@@ -47,7 +46,7 @@
   text-align: center;
   margin-top: 40px;
   padding: 20px;
-  background-color: #3F72AF;
+  background-color: #3f72af;
   color: #fff;
   border-radius: 8px;
 }

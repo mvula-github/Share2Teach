@@ -30,14 +30,25 @@ function App() {
           <div className="content">
             <Routes>
               <Route path="/home" element={<Landing />} />
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/users" element={<Users />} />
-              <Route path="/contributors" element={<Contributors />} />
               <Route path="/about-us" element={<AboutUs />} />
               <Route path="/reset-password" element={<PasswordReset />} />
               <Route path="/signUp" element={<SignUp />} />
+
+              {/* General Users */}
               <Route path="/oer" element={<OER />} />
+              <Route path="/faq" element={<FAQ />} />
+
+              {/* Educators */}
+              <Route path="/contribute" element={<FileUpload />} />
+
+              {/* Moderators */}
+              <Route path="/moderate" element={<Moderate />} />
+
+              {/* Admins */}
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/users" element={<Users />} />
               <Route path="/managefaq" element={<ManageFAQ />} />
+              <Route path="/contributors" element={<Contributors />} />
             </Routes>
           </div>
         </div>

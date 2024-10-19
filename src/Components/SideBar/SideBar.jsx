@@ -169,7 +169,7 @@ const SideBar = () => {
             </Typography>
             <Item
               title="Contribute"
-              to="/form"
+              to="/contribute"
               icon={<FileUploadOutlined />}
               selected={selected}
               setSelected={setSelected}
@@ -185,7 +185,7 @@ const SideBar = () => {
             </Typography>
             <Item
               title="Moderate"
-              to="/bar"
+              to="/moderate"
               icon={<ChecklistOutlined />}
               selected={selected}
               setSelected={setSelected}
