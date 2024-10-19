@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Collapse, Button } from "antd";
@@ -55,4 +56,5 @@ function FAQ() {
   );
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export default FAQ;
