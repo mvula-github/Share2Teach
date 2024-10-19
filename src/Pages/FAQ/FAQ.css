@@ -1,0 +1,74 @@
+
+.faqs {
+  padding: 20px;
+  background-color: #DBE2EF;
+}
+
+.container-fluid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.titleHolder {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.titleHolder h2 {
+  font-size: 2.5em;
+  color: #3F72AF;
+}
+
+.faqCategory {
+  margin-bottom: 20px;
+}
+
+.faqCategory h3 {
+  font-size: 1.5em;
+  color: #3F72AF;
+  margin-bottom: 10px;
+}
+
+.ant-collapse-header {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.ant-collapse-content p {
+  font-size: 1em;
+  color: #666;
+}
+
+.quickSupport {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #3F72AF;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.quickSupport h3 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.quickSupport p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.quickSupport .ant-btn-primary {
+  background-color: #112d41;
+  border-color: #112d41;
+  font-size: 1.2em;
+}
+
+.quickSupport .ant-btn-primary:hover {
+  background-color: #0a1e2b;
+  border-color: #0a1e2b;
+}

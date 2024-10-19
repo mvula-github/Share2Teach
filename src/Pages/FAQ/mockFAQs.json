@@ -1,0 +1,135 @@
+[
+  {
+    "category": "General",
+    "questions": [
+      {
+        "question": "How do I sign in?",
+        "answer": "Click on the 'Login' tab on the homepage and enter your credentials to sign in."
+      },
+      {
+        "question": "What should I do if I forget my password?",
+        "answer": "Click on the 'Forgot Password' link on the login page and follow the instructions to reset your password."
+      },
+      {
+        "question": "What should I do if I encounter a failure message?",
+        "answer": "If you encounter a failure message, please contact support with the details of the issue."
+      }
+    ]
+  },
+  {
+    "category": "Admin",
+    "questions": [
+      {
+        "question": "How do I manage user accounts?",
+        "answer": "As an admin, you can manage user accounts through the admin dashboard. You can create, edit, or delete user accounts."
+      },
+      {
+        "question": "How do I view user analytics?",
+        "answer": "User analytics can be accessed from the admin dashboard under the 'Analytics' section."
+      },
+      {
+        "question": "How do I add a watermark or license to a document?",
+        "answer": "Admins can add watermarks or licenses to documents through the document management section in the admin dashboard."
+      }
+    ]
+  },
+  {
+    "category": "Moderator",
+    "questions": [
+      {
+        "question": "How do I moderate documents?",
+        "answer": "Moderators can review and approve or reject documents through the moderation panel available in their dashboard."
+      },
+      {
+        "question": "How do I rate a document?",
+        "answer": "You can rate a document by clicking on the rating stars available on the document's page."
+      },
+      {
+        "question": "How do I view analytics?",
+        "answer": "Moderators can view analytics related to document views and user engagement through the analytics section in their dashboard."
+      }
+    ]
+  },
+  {
+    "category": "Educator",
+    "questions": [
+      {
+        "question": "How do I contribute documents?",
+        "answer": "Educators can contribute documents by uploading them through the 'Contribute Documents' page and tagging them appropriately."
+      },
+      {
+        "question": "Can I edit my contributed documents?",
+        "answer": "Yes, you can edit your contributed documents by accessing them through your profile and making the necessary changes."
+      },
+      {
+        "question": "How do I rate a document?",
+        "answer": "You can rate a document by clicking on the rating stars available on the document's page."
+      }
+    ]
+  },
+  {
+    "category": "Open Access User",
+    "questions": [
+      {
+        "question": "How do I search for documents?",
+        "answer": "You can search for documents using the search bar on the homepage. Enter keywords related to the document you are looking for."
+      },
+      {
+        "question": "Can I rate documents?",
+        "answer": "Yes, open access users can rate documents by clicking on the rating stars available on the document's page."
+      }
+    ]
+  },
+  {
+    "category": "File Uploading & Tagging",
+    "questions": [
+      {
+        "question": "What types of files can I upload?",
+        "answer": "You can upload only PDFs and Word documents. Ensure they meet the platform's guidelines."
+      },
+      {
+        "question": "How do I tag my documents?",
+        "answer": "When uploading a document, you will be prompted to add tags. Tags help categorize and make your document searchable."
+      }
+    ]
+  },
+  {
+    "category": "File Storage",
+    "questions": [
+      {
+        "question": "Where are my files stored?",
+        "answer": "All files are securely stored on our servers and can be accessed anytime through your profile."
+      },
+      {
+        "question": "Is there a limit to the number of files I can store?",
+        "answer": "There is no limit to the number of files you can store, but each file must adhere to the size limits specified in the upload guidelines."
+      }
+    ]
+  },
+  {
+    "category": "Document Search",
+    "questions": [
+      {
+        "question": "How do I use advanced search options?",
+        "answer": "Advanced search options are available under the search bar. You can filter results by subject, grade, and other criteria."
+      },
+      {
+        "question": "What should I do if I can't find a document?",
+        "answer": "If you can't find a document, try using different keywords or check the spelling. You can also contact support for assistance."
+      }
+    ]
+  },
+  {
+    "category": "User Analytics",
+    "questions": [
+      {
+        "question": "What kind of analytics can I view?",
+        "answer": "You can view analytics related to document views, downloads, user engagement, and more."
+      },
+      {
+        "question": "How often are analytics updated?",
+        "answer": "Analytics are updated in real-time and can be accessed anytime through the analytics dashboard."
+      }
+    ]
+  }
+]

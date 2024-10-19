@@ -1,0 +1,23 @@
+[
+    {
+      "_id": "1",
+      "fileName": "Math_Lesson1.pdf",
+      "subject": "Math",
+      "grade": "Grade 1",
+      "year": 2023,
+      "category": "Lesson",
+      "description": "Introduction to basic math concepts.",
+      "userFile": "path/to/Math_Lesson1.pdf"
+    },
+    {
+      "_id": "2",
+      "fileName": "Science_Experiment.pdf",
+      "subject": "Science",
+      "grade": "Grade 2",
+      "year": 2023,
+      "category": "Experiment",
+      "description": "Simple science experiment for kids.",
+      "userFile": "path/to/Science_Experiment.pdf"
+    }
+  ]
+  

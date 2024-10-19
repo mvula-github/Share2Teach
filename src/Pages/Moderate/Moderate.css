@@ -1,0 +1,56 @@
+.moderate-page {
+    padding: 16px;
+    max-width: 800px;
+    margin: auto;
+    background-color: #DBE2EF; /* Background color */
+  }
+  
+  .file-card {
+    margin-bottom: 16px;
+    border: 1px solid #3F72AF; /* Border color */
+    border-radius: 8px;
+    background-color: #f9f7f7; /* Card background color */
+  }
+  
+  .file-card .MuiCardContent-root {
+    padding: 16px;
+  }
+  
+  .file-card .MuiTypography-h6 {
+    color: #3F72AF; /* Heading color */
+  }
+  
+  .file-card .MuiTypography-body2 {
+    color: #3F72AF; /* Text color */
+  }
+  
+  .file-card a {
+    display: block;
+    margin-top: 8px;
+    color: #3F72AF; /* Link color */
+    text-decoration: none;
+  }
+  
+  .file-card a:hover {
+    text-decoration: underline;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+  
+  .action-buttons .MuiIconButton-root {
+    color: #3F72AF; /* Button color */
+  }
+  
+  .action-buttons .MuiIconButton-root:hover {
+    background-color: #DBE2EF; /* Button hover color */
+  }
+  
+  .error {
+    color: red;
+    font-size: 12px;
+  }
+  
