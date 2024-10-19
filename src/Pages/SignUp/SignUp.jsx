@@ -161,7 +161,7 @@ const SignUp = () => {
             Login
           </div>
         </div>
-        <Link to="/">Back to Home</Link>
+        <Link to="/home">Back to Home</Link>
       </form>
     </div>
   );
