@@ -14,6 +14,7 @@ import OER from "./Pages/OER/OER";
 import AboutUs from "./Pages/AboutUs/AboutUs";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import FAQ from "./Pages/AdminPage/FAQ/FAQ";
+import ManageFAQ from "./Pages/AdminPage/FAQ/FAQ";
 //import Navigation from './Components/Navigation/Navigation';
 
 function App() {
@@ -34,7 +35,7 @@ function App() {
               <Route path="/reset-password" element={<PasswordReset />} />
               <Route path="/signUp" element={<SignUp />} />
               <Route path="/oer" element={<OER />} />
-              <Route path="/faq" element={<FAQ />} />
+              <Route path="/managefaq" element={<ManageFAQ />} />
             </Routes>
           </div>
         </div>

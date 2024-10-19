@@ -6,7 +6,7 @@ import * as yup from "yup";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Header from "../Header";
 
-const FAQ = () => {
+const ManageFAQ = () => {
   const isNonMobile = useMediaQuery("(min-width:600px)");
 
   const handleFormSubmit = (values) => {
@@ -105,4 +105,4 @@ const initialValues = {
 };
 
 // eslint-disable-next-line react-refresh/only-export-components
-export default FAQ;
+export default ManageFAQ;
