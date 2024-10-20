@@ -1,0 +1,85 @@
+/* Container for the entire subject display */
+.subject-container {
+  margin: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  color: #007bff;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Style for error messages */
+.error-message {
+  color: red;
+  margin-bottom: 20px;
+}
+
+/* Container for the subject blocks */
+.subject-blocks-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.subject-block {
+  padding: 20px;
+  background-color: #f0f4ff;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: center;
+  width: 150px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Highlight the selected block */
+.subject-block.active {
+  background-color: #f0f4ff;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Subject documents container */
+.subject-documents {
+  text-align: left;
+  margin-top: 20px;
+}
+
+/* Document list */
+.subject-documents ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.subject-documents li {
+  display: flex; /* Align document title and buttons horizontally */
+  align-items: center;
+  justify-content: space-between; /* Space between document title and buttons */
+  margin-bottom: 10px;
+}
+
+/* the view and download buttons*/
+.document-actions {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
+
+.subject-documents button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.subject-documents button:hover {
+  background-color: #0056b3;
+}
