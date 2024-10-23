@@ -13,7 +13,7 @@ import PasswordReset from "./Pages/PasswordReset/PasswordReset";
 import OER from "./Pages/OER/OER";
 import AboutUs from "./Pages/AboutUs/AboutUs";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import ManageFAQ from "./Pages/AdminPage/FAQ/FAQ";
+import ManageFAQ from "./Pages/AdminPage/ManageFAQ/ManageFAQ";
 import FileUpload from "./Pages/FileUpload/FileUpload";
 import Moderate from "./Pages/Moderate/Moderate";
 import FAQ from "./Pages/FAQ/FAQ";

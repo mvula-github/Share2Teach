@@ -6,7 +6,9 @@ import {
   Card,
   CardContent,
   Typography,
+  useTheme,
 } from "@mui/material";
+import { tokens } from "../../theme";
 import CheckIcon from "@mui/icons-material/Check";
 import CloseIcon from "@mui/icons-material/Close";
 import "./Moderate.css";
@@ -67,13 +69,16 @@ function Moderate() {
     setComments({ ...comments, [id]: value });
   };
 
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+
   return (
     <div className="moderate-page">
       <Typography variant="h4" gutterBottom>
         File Moderation
       </Typography>
       {files.map((file) => (
-        <Card key={file._id} className="file-card">
+        <Card key={file._id} className="file-card" color={colors.sky[500]}>
           <CardContent>
             <Typography variant="h6">{file.fileName}</Typography>
             <Typography variant="body2">Subject: {file.subject}</Typography>

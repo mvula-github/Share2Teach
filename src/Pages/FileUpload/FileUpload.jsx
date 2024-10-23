@@ -1,10 +1,20 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import React, { useRef, useState, useEffect } from "react";
-import { Button, IconButton, TextField, MenuItem } from "@mui/material";
+import {
+  Button,
+  IconButton,
+  TextField,
+  MenuItem,
+  useTheme,
+} from "@mui/material";
 import AttachmentIcon from "@mui/icons-material/Attachment";
+import { tokens } from "../../theme";
 import DeleteIcon from "@mui/icons-material/Delete";
 import "./FileUpload.css";
 import mockData from "./mockData.json"; // Import mock data
 import categoriesData from "./CategoriesData.json"; // Import categories data
+import { blue } from "@mui/material/colors";
 
 function FileUpload({ accept = "", onSelectFile, onDeleteFile, disabled }) {
   const hiddenFileInput = useRef(null);
@@ -60,17 +70,23 @@ function FileUpload({ accept = "", onSelectFile, onDeleteFile, disabled }) {
     const newErrors = {};
     if (!file) newErrors.file = "File is required";
     if (!fileName) newErrors.fileName = "File name is required";
-    if (fileName.length < 5 || fileName.length > 50) newErrors.fileName = "File name must be between 5 and 50 characters";
+    if (fileName.length < 5 || fileName.length > 50)
+      newErrors.fileName = "File name must be between 5 and 50 characters";
     if (!subject) newErrors.subject = "Subject is required";
-    if (subject.length < 2 || subject.length > 25) newErrors.subject = "Subject must be between 2 and 25 characters";
+    if (subject.length < 2 || subject.length > 25)
+      newErrors.subject = "Subject must be between 2 and 25 characters";
     if (!grade) newErrors.grade = "Grade is required";
-    if (!grades.includes(grade)) newErrors.grade = "Grade must be a valid grade";
+    if (!grades.includes(grade))
+      newErrors.grade = "Grade must be a valid grade";
     if (!year) newErrors.year = "Year is required";
-    if (year < 2000 || year > new Date().getFullYear()) newErrors.year = "Year must be between 2000 and the current year";
+    if (year < 2000 || year > new Date().getFullYear())
+      newErrors.year = "Year must be between 2000 and the current year";
     if (!category) newErrors.category = "Category is required";
-    if (category.length < 5 || category.length > 20) newErrors.category = "Category must be between 5 and 20 characters";
+    if (category.length < 5 || category.length > 20)
+      newErrors.category = "Category must be between 5 and 20 characters";
     if (!description) newErrors.description = "Description is required";
-    if (description.length > 300) newErrors.description = "Description must be less than 300 characters";
+    if (description.length > 300)
+      newErrors.description = "Description must be less than 300 characters";
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
@@ -100,11 +116,21 @@ function FileUpload({ accept = "", onSelectFile, onDeleteFile, disabled }) {
     }
   };
 
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+
   return (
     <div className="file-uploader">
-      <div className={`file-div ${disabled && "disabled"}`}>
-        <Button onClick={handleClick} disabled={disabled}>
-          <AttachmentIcon />
+      <div
+        color={colors.navy[500]}
+        className={`file-div ${disabled && "disabled"}`}
+      >
+        <Button
+          color={colors.navy[500]}
+          onClick={handleClick}
+          disabled={disabled}
+        >
+          <AttachmentIcon color={colors.navy[500]} />
           <input
             type="file"
             accept={accept}
@@ -113,7 +139,7 @@ function FileUpload({ accept = "", onSelectFile, onDeleteFile, disabled }) {
             hidden
             disabled={disabled}
           />
-          <div className="file-name">
+          <div className="file-name" color={colors.navy[500]}>
             {file ? <div>{fileName}</div> : <div>Choose file</div>}
           </div>
         </Button>
@@ -121,6 +147,7 @@ function FileUpload({ accept = "", onSelectFile, onDeleteFile, disabled }) {
       </div>
       <TextField
         label="File Name"
+        color={colors.navy[500]}
         value={fileName}
         onChange={(e) => setFileName(e.target.value)}
         disabled={disabled}
@@ -190,17 +217,22 @@ function FileUpload({ accept = "", onSelectFile, onDeleteFile, disabled }) {
         helperText={errors.description}
         multiline
         rows={4}
+        color={colors.navy[500]}
       />
       <IconButton
         aria-label="delete"
         disabled={disabled}
-        color="primary"
         onClick={handleDelete}
       >
         <DeleteIcon />
       </IconButton>
-      <Button onClick={handleSubmit} disabled={disabled}>
-        FileUpload
+      <Button
+        color="white"
+        onClick={handleSubmit}
+        disabled={disabled}
+        background-color="black"
+      >
+        File Upload
       </Button>
     </div>
   );
