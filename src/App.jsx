@@ -1,5 +1,6 @@
-import './App.css'
-import Landing from './Pages/Landing/Landing'
+/* eslint-disable no-unused-vars */
+import "./App.css";
+import Landing from "./Pages/Landing/Landing";
 // importing routers
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 // page for in the case of any errors
@@ -10,7 +11,6 @@ import Subjects from './Pages/Landing/Subjects'
 
 
 function App() {
-
   return (
     <>
       <div className='app-container'>
@@ -37,7 +37,7 @@ function App() {
 
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

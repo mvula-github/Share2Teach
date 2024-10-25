@@ -3,7 +3,6 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import "./SelfDirect.css";
 
-const SelfDirect = () => {
     const subs = [
         {
             title: 'English',
@@ -160,31 +159,33 @@ const SelfDirect = () => {
 
     ];
 
+const SelfDirect = () => {
+  return (
+    <div>
+      <h1 className="heading">Self-Directed Learning page</h1>
 
-
-    return (
-        
-        <div>
-            <h1 className='heading'>Self-Directed Learning page</h1>
-
-            <p className='paragraph'>Welcome to the self-directed landing page. In this page, you will find a collection of videos based on the subject you are learning with corresponding topics. Click on the topics below to direct you to helpful YouTube videos and get ready to learn.</p>
-            {subs.map((sub, index) => (
-                <div key={index} className='subs'>
-                    <h2 className='subsTitle'>{sub.title}</h2>
-                    <ul className='linkList'>
-                     {sub.links.map((link, i) => (
-                        <li key={i}>
-                            <a href={link.url} target="_blank" rel="noopener noreferrer">
-                                {link.name}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
-            </div>
+      <p className="paragraph">
+        Welcome to the self-directed landing page. In this page, you will find a
+        collection of videos based on the subject you are learning with
+        corresponding topics. Click on the topics below to direct you to helpful
+        YouTube videos and get ready to learn.
+      </p>
+      {subs.map((sub, index) => (
+        <div key={index} className="subs">
+          <h2 className="subsTitle">{sub.title}</h2>
+          <ul className="linkList">
+            {sub.links.map((link, i) => (
+              <li key={i}>
+                <a href={link.url} target="_blank" rel="noopener noreferrer">
+                  {link.name}
+                </a>
+              </li>
             ))}
+          </ul>
         </div>
-    );
-}
-
+      ))}
+    </div>
+  );
+};
 
 export default SelfDirect;
