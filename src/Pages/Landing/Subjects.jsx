@@ -1,8 +1,6 @@
-//import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
-import HomeIcon from '../../Components/HomeIcon/HomeIcon';
 import './Subjects.css';
 
 const Subjects = ({ category }) => {
@@ -17,7 +15,7 @@ const Subjects = ({ category }) => {
                 const response = await axios.get('http://localhost:5000/api/documents');
                 setSubjects(response.data);
             } catch (error) {
-                setError('Could not fetch subjects and documents');
+                setError('Unable to fetch subjects and documents');
             }
         };
 
@@ -49,7 +47,7 @@ const Subjects = ({ category }) => {
             document.body.appendChild(link);
             link.click();
         } catch (error) {
-            setError('Download cannot be done');
+            setError('Could not download document');
         }
     };
 
@@ -60,14 +58,6 @@ const Subjects = ({ category }) => {
         <div className='subject-container'>
             <div className='header'>
                 <h1>Subjects</h1>
-                <HomeIcon />
-                   {/*} <Link to="/">
-                    <img 
-                        src="home.jpg"
-                        alt="home"
-                        className='home-icon'
-                    />
-                    </Link>*/}
             </div>
             
             {error && <p className='error-message'>{error}</p>}

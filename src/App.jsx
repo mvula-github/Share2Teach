@@ -33,6 +33,10 @@ function App() {
         <NoPage />
 
         <Subjects />*/}
+
+        <SelfDirect />
+
+        <Subjects />
         
 
       </div>

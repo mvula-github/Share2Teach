@@ -5,16 +5,17 @@
   
   .header h1{
     margin: 0;
-    color: #007bff; 
+    color: #3F72AF;
+    font-size: 36px;
   }
 
   .header{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
   }
 
-  
 
   /* Style for error messages */
   .error-message {
@@ -34,18 +35,21 @@
   .subject-block {
     padding: 20px;
     background-color: #f0f4ff;
+    border: 2px solid #007bff;
     border-radius: 20px;
     cursor: pointer;
     font-size: 18px;
     text-align: center;
     width: 150px;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    color: #333;
   }
   
   /* Highlight the selected block */
   .subject-block.active {
     background-color: #f0f4ff;
     color: white;
+    border-color: #0056b3;
     transform: scale(1.05);
   }
   
