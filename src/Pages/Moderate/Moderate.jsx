@@ -12,8 +12,8 @@ import { tokens } from "../../theme";
 import CheckIcon from "@mui/icons-material/Check";
 import CloseIcon from "@mui/icons-material/Close";
 import "./Moderate.css";
-//import mockFiles from "./mockFiles.json"; //Import mock data
 import axios from "axios";
+import Header from "../AdminPage/Header";
 
 function Moderate() {
   const [files, setFiles] = useState([]);
@@ -78,52 +78,55 @@ function Moderate() {
   const colors = tokens(theme.palette.mode);
 
   return (
-    <div className="moderate-page">
-      <Typography variant="h4" gutterBottom>
-        File Moderation
-      </Typography>
-      {files.map((file) => (
-        <Card key={file._id} className="file-card" color={colors.sky[500]}>
-          <CardContent>
-            <Typography variant="h6">{file.fileName}</Typography>
-            <Typography variant="body2">Subject: {file.subject}</Typography>
-            <Typography variant="body2">Grade: {file.grade}</Typography>
-            <Typography variant="body2">Year: {file.year}</Typography>
-            <Typography variant="body2">Category: {file.category}</Typography>
-            <Typography variant="body2">
-              Description: {file.description}
-            </Typography>
-            <a href={`/${file.userFile}`} download>
-              Download File
-            </a>
-            <TextField
-              label="Comments"
-              value={comments[file._id] || ""}
-              onChange={(e) => handleCommentChange(file._id, e.target.value)}
-              fullWidth
-              multiline
-              rows={2}
-              margin="normal"
-            />
-            <div>{responseMessage && <p>{responseMessage}</p>}</div>
-            <div className="action-buttons">
-              <IconButton
-                color="primary"
-                onClick={() => handleApprove(file._id)}
-              >
-                <CheckIcon />
-              </IconButton>
-              <IconButton
-                color="secondary"
-                onClick={() => handleDisapprove(file._id)}
-              >
-                <CloseIcon />
-              </IconButton>
-            </div>
-          </CardContent>
-        </Card>
-      ))}
-    </div>
+    <>
+      <div className="moderate-page">
+        <Header
+          title="Moderation"
+          subtitle="Approving or Disapproving documents"
+        />
+        {files.map((file) => (
+          <Card key={file._id} className="file-card" color={colors.sky[500]}>
+            <CardContent>
+              <Typography variant="h6">{file.fileName}</Typography>
+              <Typography variant="body2">Subject: {file.subject}</Typography>
+              <Typography variant="body2">Grade: {file.grade}</Typography>
+              <Typography variant="body2">Year: {file.year}</Typography>
+              <Typography variant="body2">Category: {file.category}</Typography>
+              <Typography variant="body2">
+                Description: {file.description}
+              </Typography>
+              <a href={`/${file.userFile}`} download>
+                Download File
+              </a>
+              <TextField
+                label="Comments"
+                value={comments[file._id] || ""}
+                onChange={(e) => handleCommentChange(file._id, e.target.value)}
+                fullWidth
+                multiline
+                rows={2}
+                margin="normal"
+              />
+              <div>{responseMessage && <p>{responseMessage}</p>}</div>
+              <div className="action-buttons">
+                <IconButton
+                  color="primary"
+                  onClick={() => handleApprove(file._id)}
+                >
+                  <CheckIcon />
+                </IconButton>
+                <IconButton
+                  color="secondary"
+                  onClick={() => handleDisapprove(file._id)}
+                >
+                  <CloseIcon />
+                </IconButton>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </>
   );
 }
 
