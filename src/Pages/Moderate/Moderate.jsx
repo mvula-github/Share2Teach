@@ -12,23 +12,28 @@ import { tokens } from "../../theme";
 import CheckIcon from "@mui/icons-material/Check";
 import CloseIcon from "@mui/icons-material/Close";
 import "./Moderate.css";
-import mockFiles from "./mockFiles.json"; //Import mock data
+//import mockFiles from "./mockFiles.json"; //Import mock data
+import axios from "axios";
 
 function Moderate() {
   const [files, setFiles] = useState([]);
   const [comments, setComments] = useState({});
+  const [error, setError] = useState(null);
+  const [responseMessage, setResponseMessage] = useState("");
 
   useEffect(() => {
     fetchFiles();
-    setFiles(mockFiles);
   }, []);
 
   const fetchFiles = async () => {
     try {
-      const response = await fetch("/api/files");
-      const data = await response.json();
-      // Filter files that need moderation (not approved)
-      const filesToModerate = data.filter((file) => !file.approved);
+      const response = await axios.get("http://localhost:5000/api/uploads");
+      const data = response.data;
+
+      // Check if data is an array; if not, adjust as needed
+      const files = Array.isArray(data) ? data : data.files || []; // Adjust if 'files' key is present
+      const filesToModerate = files.filter((file) => !file.approved);
+
       setFiles(filesToModerate);
     } catch (error) {
       console.error("Error fetching files:", error);
@@ -37,10 +42,10 @@ function Moderate() {
 
   const handleApprove = async (id) => {
     try {
-      const response = await fetch(`/api/files/${id}/approve`, {
-        method: "PATCH",
-      });
-      if (response.ok) {
+      const response = await axios.patch(
+        `http://localhost:5000/api/uploads/${id}/approve`
+      );
+      if (response.status === 201) {
         fetchFiles(); // Refresh the list after approval
       } else {
         console.error("Error approving file");
@@ -52,10 +57,10 @@ function Moderate() {
 
   const handleDisapprove = async (id) => {
     try {
-      const response = await fetch(`/api/files/${id}`, {
-        method: "DELETE",
-      });
-      if (response.ok) {
+      const response = await axios.patch(
+        `http://localhost:5000/api/uploads/${id}/disapprove`
+      );
+      if (response.status === 200) {
         fetchFiles(); // Refresh the list after deletion
       } else {
         console.error("Error deleting file");
@@ -100,6 +105,7 @@ function Moderate() {
               rows={2}
               margin="normal"
             />
+            <div>{responseMessage && <p>{responseMessage}</p>}</div>
             <div className="action-buttons">
               <IconButton
                 color="primary"

@@ -14,7 +14,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import "./FileUpload.css";
 import mockData from "./mockData.json"; // Import mock data
 import categoriesData from "./CategoriesData.json"; // Import categories data
-import { blue } from "@mui/material/colors";
+import axios from "axios";
 
 function FileUpload({ accept = "", onSelectFile, onDeleteFile, disabled }) {
   const hiddenFileInput = useRef(null);
@@ -29,6 +29,7 @@ function FileUpload({ accept = "", onSelectFile, onDeleteFile, disabled }) {
   const [grades, setGrades] = useState([]);
   const [categories, setCategories] = useState([]);
   const [errors, setErrors] = useState({});
+  const [responseMessage, setResponseMessage] = useState("");
 
   useEffect(() => {
     setSubjects(mockData.subjects);
@@ -44,12 +45,10 @@ function FileUpload({ accept = "", onSelectFile, onDeleteFile, disabled }) {
   };
 
   const handleChange = (event) => {
-    const selectedFile = event.target.files; // Access the first file
+    const selectedFile = event.target.files[0]; // Access the first file
     if (selectedFile) {
       if (selectedFile.size > 30 * 1024 * 1024) {
         setErrors({ ...errors, file: "File too large" });
-      } else if (!accept.includes(selectedFile.type)) {
-        setErrors({ ...errors, file: "Incorrect file type" });
       } else {
         setFile(selectedFile);
         setFileName(selectedFile.name);
@@ -58,16 +57,21 @@ function FileUpload({ accept = "", onSelectFile, onDeleteFile, disabled }) {
       }
     }
   };
-
   const handleDelete = () => {
     setFile(null);
     setFileName("");
+    setSubject("");
+    setGrade();
+    setCategory("");
+    setDescription("");
     hiddenFileInput.current.value = null;
     onDeleteFile && onDeleteFile();
   };
 
   const handleSubmit = async () => {
     const newErrors = {};
+
+    // Validation logic
     if (!file) newErrors.file = "File is required";
     if (!fileName) newErrors.fileName = "File name is required";
     if (fileName.length < 5 || fileName.length > 50)
@@ -87,8 +91,10 @@ function FileUpload({ accept = "", onSelectFile, onDeleteFile, disabled }) {
     if (!description) newErrors.description = "Description is required";
     if (description.length > 300)
       newErrors.description = "Description must be less than 300 characters";
+
     setErrors(newErrors);
 
+    // If no errors, proceed with the POST request
     if (Object.keys(newErrors).length === 0) {
       const formData = new FormData();
       formData.append("file", file);
@@ -100,18 +106,19 @@ function FileUpload({ accept = "", onSelectFile, onDeleteFile, disabled }) {
       formData.append("description", description);
 
       try {
-        const response = await fetch("/api/uploads", {
-          method: "POST",
-          body: formData,
-        });
-        const result = await response.json();
-        if (response.ok) {
-          console.log("File uploaded successfully", result);
-        } else {
-          console.error("File upload failed", result);
-        }
+        // Send POST request to backend
+        const response = await axios.post(
+          "http://localhost:5000/api/uploads",
+          formData
+        );
+        console.log("Response:", response);
+        setResponseMessage("File added successfully!");
       } catch (error) {
-        console.error("File upload failed", error);
+        console.error(
+          "Error adding file:",
+          error.response?.data || error.message
+        );
+        setResponseMessage("Error adding file");
       }
     }
   };
@@ -228,12 +235,13 @@ function FileUpload({ accept = "", onSelectFile, onDeleteFile, disabled }) {
       </IconButton>
       <Button
         color="white"
+        type="submit"
         onClick={handleSubmit}
         disabled={disabled}
-        background-color="black"
       >
         File Upload
       </Button>
+      <div>{responseMessage && <p>{responseMessage}</p>}</div>
     </div>
   );
 }
