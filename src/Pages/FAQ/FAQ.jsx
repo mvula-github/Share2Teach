@@ -1,25 +1,28 @@
+/* eslint-disable react/jsx-key */
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Collapse, Button } from "antd";
-import mockFAQs from "./mockFAQs"; // Import the mock JSON File
 import "./FAQ.css"; // Import the CSS file
 
 const { Panel } = Collapse;
 
 function FAQ() {
   const [faqs, setFaqs] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     // Fetch FAQs from the API
-    /*axios.get('/api/faqs')
-      .then(response => setFaqs(response.data))
-      .catch(error => console.error('Error fetching FAQs:', error));
-      
-    */
+    axios
+      .get(`http://localhost:5000/api/faqs`)
+      .then((response) => setFaqs(response.data))
+      .catch((error) => console.error("Error fetching FAQs:", error));
+
     // Use mock data for testing
-    setFaqs(mockFAQs);
+    //setFaqs(mockFAQs);
   }, []);
+
+  if (error) return <div>{error}</div>;
 
   return (
     <div id="faq" className="faqs">
@@ -27,15 +30,14 @@ function FAQ() {
         <div className="titleHolder">
           <h2>Frequently Asked Questions</h2>
         </div>
-        {faqs.map((category, index) => (
-          <div key={index} className="faqCategory">
-            <h3>{category.category}</h3>
+
+        {faqs.map((faq) => (
+          <div key={faq.id} className="faqCategory">
+            <h3>{faq.category}</h3>
             <Collapse defaultActiveKey={["0"]}>
-              {category.questions.map((faq, idx) => (
-                <Panel header={faq.question} key={idx}>
-                  <p>{faq.answer}</p>
-                </Panel>
-              ))}
+              <Panel header={faq.question} key={faq.id}>
+                <p>{faq.answer}</p>
+              </Panel>
             </Collapse>
           </div>
         ))}
