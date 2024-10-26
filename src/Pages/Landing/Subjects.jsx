@@ -1,12 +1,17 @@
 import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import './Subjects.css';
 
 const Subjects = ({ category }) => {
+    const location = useLocation();
     const [subjects, setSubjects] = useState([]);
     const [selectedSubject, setSelectedSubject] = useState(null);
     const [error, setError] = useState('');
+
+    // to get search results from location state
+    const searchResults = location.state?.searchResults;
 
     // Fetch subjects and documents from the database
     useEffect(() => {
@@ -19,8 +24,9 @@ const Subjects = ({ category }) => {
             }
         };
 
-        getSubjects();
-    }, []);
+        // if there is no search
+        if (!searchResults)getSubjects();
+    }, [searchResults]);
 
     // Open a document in a new tab
     const handlePreview = async (id) => {
@@ -51,8 +57,11 @@ const Subjects = ({ category }) => {
         }
     };
 
-    // Filter subjects based on the selected category from the navbar
-    const filteredSubjects = subjects.filter((subject) => subject.category === category);
+    // Filter subjects based on the selected category from the navbar and also from the search results
+    const filteredSubjects = 
+        category === "all"
+        ? subjects
+        : subjects.filter((subject) => subject.category === category);
 
     return (
         <div className='subject-container'>

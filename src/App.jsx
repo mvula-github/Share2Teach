@@ -25,6 +25,7 @@ function App() {
         </Router> 
 
        {/* < Landing />
+       please adjust this according, this is the full page that you can connect to sidebar
         <Route path = "/Subjects" element = {<Subjects/>} />
             <Route path = "*" element = {<NoPage />} />
 
