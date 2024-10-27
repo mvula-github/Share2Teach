@@ -1,13 +1,16 @@
-/* eslint-disable no-unused-vars */
+// eslint-disable-next-line no-unused-vars
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./NavBar.css";
 
 const NavBar = () => {
   const navigate = useNavigate();
 
+  // eslint-disable-next-line no-unused-vars
   const handleCategorySelect = (category) => {
     navigate("/subjects", { state: { category } });
   };
+
   return (
     <>
       <div className="nav-container">
