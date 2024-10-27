@@ -20,7 +20,7 @@ const SignUp = () => {
   const [responseMessage, setResponseMessage] = useState("");
   const navigate = useNavigate(); //Hook for navigation which we are able to do because we imported useNavigate from react-router-dom
 
-  const handleSubmit = async (e) => {
+  const handleSubmitSignUp = async (e) => {
     e.preventDefault();
     const newErrors = {}; // Initialize empty error object
 
@@ -51,7 +51,6 @@ const SignUp = () => {
         password,
         cPassword,
       };
-      console.log(formData);
 
       try {
         const response = await axios.post(
@@ -64,13 +63,55 @@ const SignUp = () => {
         console.log("Response:", response);
         setResponseMessage("Sign Up successful");
 
-        //navigate("/oer"); // Navigate after successful signup
+        navigate("/subjects"); // Navigate after successful signup
       } catch (error) {
         console.error(
           "Error signing up:",
           error.response?.data || error.message
         );
-        setResponseMessage("Error signing up");
+        setResponseMessage("Error signing up ", error.response?.data);
+      }
+    }
+  };
+
+  const handleSubmitLogin = async (e) => {
+    e.preventDefault();
+    const newErrors = {}; // Initialize empty error object
+
+    if (!email) {
+      newErrors.email = "Required!";
+    } else if (email) {
+      if (!validateEmail(email)) {
+        newErrors.email = "Invalid email";
+      }
+    }
+    if (!password) newErrors.password = "Required!";
+
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length === 0) {
+      const formData = {
+        email,
+        password,
+      };
+
+      try {
+        const response = await axios.post(
+          "http://localhost:5000/api/auth/login",
+          formData,
+          {
+            headers: { "Content-Type": "application/json" },
+          }
+        );
+        console.log("Response:", response);
+        setResponseMessage("Login successful");
+        navigate("/subjects"); // Navigate after successful logging
+      } catch (error) {
+        console.error(
+          "Error logging in:",
+          error.response?.data || error.message
+        );
+        setResponseMessage("Error logging in ");
       }
     }
   };
@@ -159,9 +200,15 @@ const SignUp = () => {
 
       {/* Submit Button */}
       <div className="submit-container">
-        <button type="submit" className="submit" onClick={handleSubmit}>
-          {action === "Sign Up" ? "Sign Up" : "Login"}
-        </button>
+        {action === "Sign Up" ? (
+          <button type="submit" className="submit" onClick={handleSubmitSignUp}>
+            Sign Up
+          </button>
+        ) : (
+          <button type="submit" className="submit" onClick={handleSubmitLogin}>
+            Login
+          </button>
+        )}
       </div>
 
       {/* Response Message */}
