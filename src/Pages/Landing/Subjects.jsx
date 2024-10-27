@@ -8,7 +8,7 @@ const Subjects = ({ category }) => {
   const location = useLocation();
   const [subjects, setSubjects] = useState([]);
   const [selectedSubject, setSelectedSubject] = useState(null);
-  const [error, setError] = useState("");
+  const [error, setError] = useState(null);
 
   // to get search results from location state
   const searchResults = location.state?.searchResults;
@@ -17,7 +17,7 @@ const Subjects = ({ category }) => {
   useEffect(() => {
     const getSubjects = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/documents");
+        const response = await axios.get("http://localhost:5000/api/subjects");
         setSubjects(response.data);
       } catch (error) {
         setError("Unable to fetch subjects and documents");
@@ -32,7 +32,7 @@ const Subjects = ({ category }) => {
   const handlePreview = async (id) => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/documents/preview/${id}`
+        `http://localhost:5000/api/subjects/preview/${id}`
       );
       window.open(`http://localhost:5000${response.data.fileUrl}`, "_blank");
     } catch (error) {
@@ -44,10 +44,7 @@ const Subjects = ({ category }) => {
   const handleDownload = async (id, docTitle) => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/documents/download/${id}`,
-        {
-          responseType: "blob",
-        }
+        `http://localhost:5000/api/subjects/download/${id}`
       );
       const url = window.URL.createObjectURL(new Blob([response.data]));
       const link = document.createElement("a");
@@ -64,7 +61,7 @@ const Subjects = ({ category }) => {
   const filteredSubjects =
     category === "all"
       ? subjects
-      : subjects.filter((subject) => subject.category === category);
+      : subjects.filter((subject) => subject.category);
 
   return (
     <div className="subject-container">

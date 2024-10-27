@@ -1,45 +1,20 @@
-/* eslint-disable no-unused-vars */
 import "./App.css";
 import Landing from "./Pages/Landing/Landing";
-// importing routers
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-// page for in the case of any errors
-import SelfDirect from "./Pages/Landing/SelfDirect"
-
-//import NoPage from './Pages/Landing/NoPage'
-import Subjects from './Pages/Landing/Subjects'
-
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import SelfDirect from "./Pages/Landing/SelfDirect";
+import Subjects from "./Pages/Landing/Subjects";
 
 function App() {
   return (
     <>
-      <div className='app-container'>
-
+      <div className="app-container">
         <Router>
           <Routes>
-            <Route path = "/" element = {<Landing />} />
-            <Route path = "/Subjects" element = {<Subjects />} />
-            <Route path = "/Self-Direct" element = {<SelfDirect/>} />
-            
+            <Route path="/" element={<Landing />} />
+            <Route path="/Subjects" element={<Subjects />} />
+            <Route path="/Self-Direct" element={<SelfDirect />} />
           </Routes>
-        </Router> 
-
-       {/* < Landing />
-       please adjust this according, this is the full page that you can connect to sidebar
-        <Route path = "/Subjects" element = {<Subjects/>} />
-            <Route path = "*" element = {<NoPage />} />
-
-        <SelfDirect />
-
-        <NoPage />
-
-        <Subjects />*/}
-
-        <SelfDirect />
-
-        <Subjects />
-        
-
+        </Router>
       </div>
     </>
   );
