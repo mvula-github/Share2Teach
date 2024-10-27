@@ -4,7 +4,7 @@
 }
 
 h3 {
-  color: #333;
+  color: #112d41;
 }
 
 .title {
@@ -30,10 +30,10 @@ h3 {
 
 .founder-bubble {
   background-color: #f0f4f8; /* Light grey/blue background */
-  border-radius: 20px; /* Rounded rectangle effect */
+  border-radius: 15px; /* Rounded rectangle effect */
   padding: 20px;
-  width: 220px; /* Adjust width for a more rectangular shape */
-  height: 300px; /* Adjust height for a more rectangular shape */
+  width: 25%; /* Adjust width for a more rectangular shape */
+  height: 400px; /* Adjust height for a more rectangular shape */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,13 +52,13 @@ h3 {
 
 .founder-role {
   font-size: 0.9rem;
-  color: #555;
+  color: #112d41;
   margin-bottom: 5px;
 }
 
 .founder-bio {
   font-size: 0.8rem;
-  color: #333;
+  color: #112d41;
 }
 
 /* --------------- */
@@ -77,10 +77,10 @@ h3 {
 
 .developer-bubble {
   background-color: #f0f4f8; /* Light grey/blue background */
-  border-radius: 20px; /* Rounded rectangle effect */
+  border-radius: 15px; /* Rounded rectangle effect */
   padding: 20px;
-  width: 220px; /* Adjust width for a more rectangular shape */
-  height: 300px; /* Adjust height for a more rectangular shape */
+  width: 25%; /* Adjust width for a more rectangular shape */
+  height: 400px; /* Adjust height for a more rectangular shape */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -99,13 +99,13 @@ h3 {
 
 .developer-role {
   font-size: 0.9rem;
-  color: #555;
+  color: #112d41;
   margin-bottom: 5px;
 }
 
 .developer-bio {
   font-size: 0.8rem;
-  color: #333;
+  color: #112d41;
 }
 
 .back-link {

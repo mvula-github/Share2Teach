@@ -50,7 +50,7 @@ const AboutUs = () => {
           <p className="founder-role">Stakeholder & Lecture</p>
           <p className="founder-bio">
             Heiki has a passion for education and has been teaching for over 10
-            years. She co-founded Share2Teach to help students access
+            years. He co-founded Share2Teach to help students access
             high-quality learning resources.
           </p>
         </div>
@@ -61,13 +61,13 @@ const AboutUs = () => {
           <p className="founder-role">Stakeholder</p>
           <p className="founder-bio">
             John is a full-stack developer who believes in the power of
-            technology to enhance education. He built the Share2Teach platform
-            to bridge gaps in academic resources.
+            technology to enhance education. He co-founded the Share2Teach
+            platform to bridge gaps in academic resources.
           </p>
         </div>
       </div>
 
-      <h2 className="development-title">Meet the development</h2>
+      <h2 className="development-title">Meet the Development Team</h2>
 
       <div className="developer">
         {/* Jane Doe's bubble */}
@@ -78,7 +78,7 @@ const AboutUs = () => {
             className="developer-img"
           />
           <h3>Mvula Kolweni</h3>
-          <p className="developer-role">Backend Developer</p>
+          <p className="developer-role">Developer</p>
           <p className="developer-bio">
             Jane has a passion for education and has been teaching for over 10
             years. She co-founded Share2Teach to help students access
@@ -88,16 +88,18 @@ const AboutUs = () => {
 
         <div className="developer-bubble">
           <img
-            src="developer1.jpg"
+            src="../../../public/assets/dev_team/Nick_Dev.jpg"
             alt="developer 1"
             className="developer-img"
           />
           <h3>Nick Mokgotlane</h3>
-          <p className="developer-role">Backend Developer</p>
+          <p className="developer-role">Developer</p>
           <p className="developer-bio">
-            Jane has a passion for education and has been teaching for over 10
-            years. She co-founded Share2Teach to help students access
-            high-quality learning resources.
+            A passionate software developer with a keen interest in
+            cybersecurity. Thrives on creating innovative solutions while
+            ensuring robust security measures are in place. With a strong
+            foundation in coding, continuously seeks to expand my knowledge in
+            both fields.
           </p>
         </div>
 
@@ -108,7 +110,7 @@ const AboutUs = () => {
             className="developer-img"
           />
           <h3>Olwethu Zungu</h3>
-          <p className="developer-role">Frontend Developer</p>
+          <p className="developer-role">Developer</p>
           <p className="developer-bio">
             Jane has a passion for education and has been teaching for over 10
             years. She co-founded Share2Teach to help students access
@@ -124,7 +126,7 @@ const AboutUs = () => {
             className="developer-img"
           />
           <h3>Jameela Sparks</h3>
-          <p className="developer-role">Frontend Developer</p>
+          <p className="developer-role">Developer</p>
           <p className="developer-bio">
             John is a full-stack developer who believes in the power of
             technology to enhance education. He built the Share2Teach platform
@@ -135,7 +137,7 @@ const AboutUs = () => {
 
       {/* Back Link */}
       <p className="back-link">
-        <Link to="/">Back</Link>
+        <Link to="/home">Back</Link>
       </p>
     </div>
   );
