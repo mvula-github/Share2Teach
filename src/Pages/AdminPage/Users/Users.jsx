@@ -1,19 +1,41 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Typography, useTheme } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { tokens } from "../../../theme";
-import { mockDataTeam } from "../../../Utilities/mockData";
-import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettingsOutlined";
-import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
-import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
 import Header from "../Header";
+import axios from "axios";
 
 const Users = () => {
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
+  const [users, setUsers] = useState([]);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`http://localhost:5000/api/users`);
+        // Assume response.data is an array of objects from your database
+        const data = response.data.map((user, index) => ({
+          id: user._id || index, // Ensure each row has a unique ID
+          name: `${user.fName} ${user.lName}`,
+          email: user.email,
+          affiliation: user.affiliation,
+          credentials: user.credentials,
+          role: user.role,
+        }));
+        setUsers(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (error) return <div>{error}</div>;
+
   const columns = [
-    { field: "id", headerName: "ID", cellClassName: "Id-column--cell" },
     {
       field: "name",
       headerName: "Name",
@@ -41,28 +63,25 @@ const Users = () => {
       field: "accessLevel",
       headerName: "Access Level",
       flex: 1,
-      renderCell: ({ row: { access } }) => {
+      renderCell: ({ row: { role } }) => {
         return (
           <Box
-            width="60%"
+            width="50%"
             m="10px auto"
-            p="7px"
+            p="8px"
             display="flex"
             justifyContent="center"
             backgroundColor={
-              access === "admin"
+              role === "admin"
                 ? colors.navy[600]
-                : access === "manager"
+                : role === "moderator"
                 ? colors.blue[600]
                 : colors.blue[300]
             }
             borderRadius="4px"
           >
-            {access === "admin" && <AdminPanelSettingsOutlinedIcon />}
-            {access === "manager" && <SecurityOutlinedIcon />}
-            {access === "user" && <LockOpenOutlinedIcon />}
             <Typography color={colors.white[500]} sx={{ ml: "5px" }}>
-              {access}
+              {role}
             </Typography>
           </Box>
         );
@@ -70,12 +89,15 @@ const Users = () => {
     },
   ];
 
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+
   return (
     <Box m="20px">
       <Header title="Users" subtitle="Managing the Users" />
       <Box
         m="40px 0 0 0"
-        height="90vh"
+        height="80vh"
         sx={{
           "& .MuiDataGrid-root": {
             border: "none",
@@ -113,7 +135,7 @@ const Users = () => {
       >
         <DataGrid
           checkboxSelection
-          rows={mockDataTeam}
+          rows={users}
           columns={columns}
           components={{ Toolbar: GridToolbar }}
         />

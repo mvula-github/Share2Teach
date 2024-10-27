@@ -199,13 +199,6 @@ const SideBar = () => {
               Admins
             </Typography>
             <Item
-              title="Dashboard"
-              to="/dashboard"
-              icon={<DashboardOutlined />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
               title="Manage Users"
               to="/users"
               icon={<PeopleOutlinedIcon />}

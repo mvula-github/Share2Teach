@@ -1,15 +1,40 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { Box, Typography, useTheme } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { tokens } from "../../../theme";
 import { mockDataTeam } from "../../../Utilities/mockData";
-import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettingsOutlined";
-import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
-import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
 import Header from "../Header";
 
 const Contributors = () => {
+  const [users, setUsers] = useState([]);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`http://localhost:5000/api/users`);
+        // Assume response.data is an array of objects from your database
+        let count = 0;
+        const data = response.data.map((user, index) => ({
+          id: (count += 1),
+          name: `${user.fName} ${user.lName}`,
+          //documents
+          role: user.role,
+        }));
+        setUsers(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (error) return <div>{error}</div>;
+
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const columns = [
@@ -26,10 +51,10 @@ const Contributors = () => {
       flex: 1,
     },
     {
-      field: "accessLevel",
+      field: "Role",
       headerName: "Role",
       flex: 1,
-      renderCell: ({ row: { access } }) => {
+      renderCell: ({ row: { role } }) => {
         return (
           <Box
             width="60%"
@@ -40,7 +65,7 @@ const Contributors = () => {
             borderRadius="4px"
           >
             <Typography color={colors.navy[600]} sx={{ ml: "5px" }}>
-              {access}
+              {role}
             </Typography>
           </Box>
         );
@@ -50,7 +75,7 @@ const Contributors = () => {
 
   return (
     <Box m="20px">
-      <Header title="Contributors" subtitle="View All users who contributed" />
+      <Header title="Contributors" subtitle="View all users who contributed" />
       <Box
         m="40px 0 0 0"
         height="90vh"
@@ -87,7 +112,7 @@ const Contributors = () => {
         }}
       >
         <DataGrid
-          rows={mockDataTeam}
+          rows={users}
           columns={columns}
           components={{ Toolbar: GridToolbar }}
         />

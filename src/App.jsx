@@ -4,7 +4,6 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import "./App.css";
 import Landing from "./Pages/Landing/Landing";
 import SideBar from "./Components/SideBar/SideBar";
-import Dashboard from "./Pages/AdminPage/DashBoard/Dashboard";
 import Users from "./Pages/AdminPage/Users/Users";
 import Contributors from "./Pages/AdminPage/Users/Contributors";
 import "./App.css";
@@ -44,7 +43,6 @@ function App() {
               <Route path="/moderate" element={<Moderate />} />
 
               {/* Admins */}
-              <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/users" element={<Users />} />
               <Route path="/managefaq" element={<ManageFAQ />} />
               <Route path="/contributors" element={<Contributors />} />
