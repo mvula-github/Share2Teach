@@ -18,5 +18,15 @@
     "Music",
     "Agricultural Science"
   ],
-  "grades": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  "grades": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+  "categories": [
+    "Practical",
+    "Exams",
+    "Class/Home Work",
+    "Notes",
+    "Projects",
+    "Study Guides",
+    "References",
+    "Assignment"
+  ]
 }

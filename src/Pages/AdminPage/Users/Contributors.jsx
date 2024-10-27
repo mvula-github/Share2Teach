@@ -5,7 +5,6 @@ import axios from "axios";
 import { Box, Typography, useTheme } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { tokens } from "../../../theme";
-import { mockDataTeam } from "../../../Utilities/mockData";
 import Header from "../Header";
 
 const Contributors = () => {

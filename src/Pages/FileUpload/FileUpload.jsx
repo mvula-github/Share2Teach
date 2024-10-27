@@ -13,7 +13,6 @@ import { tokens } from "../../theme";
 import DeleteIcon from "@mui/icons-material/Delete";
 import "./FileUpload.css";
 import mockData from "./mockData.json"; // Import mock data
-import categoriesData from "./CategoriesData.json"; // Import categories data
 import axios from "axios";
 
 function FileUpload({ accept = "", onSelectFile, onDeleteFile, disabled }) {
@@ -34,7 +33,7 @@ function FileUpload({ accept = "", onSelectFile, onDeleteFile, disabled }) {
   useEffect(() => {
     setSubjects(mockData.subjects);
     setGrades(mockData.grades);
-    setCategories(categoriesData.categories); // Set categories from JSON data
+    setCategories(mockData.categories); // Set categories from JSON data
     //fetchSubjects();
     //fetchGrades();
     //fetchCategories();
