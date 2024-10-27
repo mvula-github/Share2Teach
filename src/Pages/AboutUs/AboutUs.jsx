@@ -44,22 +44,20 @@ const AboutUs = () => {
       <h2 className="founders-title">Meet the Founders</h2>
 
       <div className="founders">
-        {/* Jane Doe's bubble */}
         <div className="founder-bubble">
           <img src="founder1.jpg" alt="Founder 1" className="founder-img" />
-          <h3>Jane Doe</h3>
-          <p className="founder-role">Stakeholder & Educator</p>
+          <h3>Heiki Pelser</h3>
+          <p className="founder-role">Stakeholder & Lecture</p>
           <p className="founder-bio">
-            Jane has a passion for education and has been teaching for over 10
+            Heiki has a passion for education and has been teaching for over 10
             years. She co-founded Share2Teach to help students access
             high-quality learning resources.
           </p>
         </div>
 
-        {/* John Smith's bubble */}
         <div className="founder-bubble">
           <img src="founder2.jpg" alt="Founder 2" className="founder-img" />
-          <h3>John Smith</h3>
+          <h3>John Klerck</h3>
           <p className="founder-role">Stakeholder</p>
           <p className="founder-bio">
             John is a full-stack developer who believes in the power of
