@@ -17,7 +17,7 @@ const Contributors = () => {
         const response = await axios.get(`http://localhost:5000/api/users`);
         // Assume response.data is an array of objects from your database
         let count = 0;
-        const data = response.data.map((user, index) => ({
+        const data = response.data.map((user) => ({
           id: (count += 1),
           name: `${user.fName} ${user.lName}`,
           //documents

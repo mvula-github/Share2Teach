@@ -10,6 +10,7 @@ import Header from "../Header";
 import axios from "axios";
 
 const ManageFAQ = () => {
+  //-------------------------VIEWING FAQ------------------------------
   const [faqs, setFAQ] = useState([]);
   const [error, setError] = useState(null);
 
