@@ -3,6 +3,11 @@ import React from "react";
 import "./NavBar.css";
 
 const NavBar = () => {
+  const navigate = useNavigate();
+
+  const handleCategorySelect = (category) => {
+    navigate("/subjects", { state: { category } });
+  };
   return (
     <>
       <div className="nav-container">
