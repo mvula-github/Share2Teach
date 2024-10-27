@@ -30,7 +30,7 @@ function App() {
           <SideBar />
           <div className="content">
             <Routes>
-              <Route path="/home" element={<Landing />} />
+              <Route path="/" element={<Landing />} />
               <Route path="/about-us" element={<AboutUs />} />
               <Route path="/reset-password" element={<PasswordReset />} />
               <Route path="/signUp" element={<SignUp />} />
