@@ -15,7 +15,7 @@ const NavBar = () => {
     <>
       <div className="nav-container">
         <div className="nav-content">
-          <h4 className="logo">S2T</h4>
+          <h4 className="logo">Share2Teach</h4>
 
           <ul>
             <li className="menu-item">Primary</li>
