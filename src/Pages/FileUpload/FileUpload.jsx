@@ -33,10 +33,7 @@ function FileUpload({ accept = "", onSelectFile, onDeleteFile, disabled }) {
   useEffect(() => {
     setSubjects(mockData.subjects);
     setGrades(mockData.grades);
-    setCategories(mockData.categories); // Set categories from JSON data
-    //fetchSubjects();
-    //fetchGrades();
-    //fetchCategories();
+    setCategories(mockData.categories);
   }, []);
 
   const handleClick = () => {
@@ -56,6 +53,7 @@ function FileUpload({ accept = "", onSelectFile, onDeleteFile, disabled }) {
       }
     }
   };
+
   const handleDelete = () => {
     setFile(null);
     setFileName("");

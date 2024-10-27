@@ -13,11 +13,12 @@ const Footer = () => {
       <Box backgroundColor={colors.navy[500]} color={colors.white[500]}>
         <div className="landing-footer-info">
           <div className="footer-info">
-            <h4>Logo</h4>
-
-            <Link to="/signUp">
-              <button>login</button>
-            </Link>
+            <h4>Share2Teach</h4>
+            <ul>
+              <Link to="/signUp">
+                <li>login</li>
+              </Link>
+            </ul>
           </div>
 
           <div className="footer-info">
