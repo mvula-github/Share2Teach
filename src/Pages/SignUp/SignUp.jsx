@@ -11,27 +11,17 @@ const SignUp = () => {
   const [action, setAction] = useState("Sign Up"); //to manage the current state of the form, whether the educator is in the sign up form or the login form
 
   //manages the form data for both sign up and login forms
-  const [fName, setfName] = useState([]);
-  const [lName, setlName] = useState([]);
-  const [email, setEmail] = useState(null);
-  const [password, setPassword] = useState([]);
-  const [cPassword, setcPassword] = useState([]);
-  const [errors, setErrors] = useState({}); //manages and displays errors in the form
+  const [fName, setfName] = useState("");
+  const [lName, setlName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [cPassword, setcPassword] = useState("");
+  const [errors, setErrors] = useState(""); //manages and displays errors in the form
   const [responseMessage, setResponseMessage] = useState("");
   const navigate = useNavigate(); //Hook for navigation which we are able to do because we imported useNavigate from react-router-dom
 
-  /*
-  const handleInputChange = (e) => {
-    //(e) contains the properties of the changed input field
-    const { name, value } = e.target; //used the attribute name to identify fields and this function will be able to handle changes for any number of inputs without needing seperate handlers for each one
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value, //value is set to something that would be like formData.fName, which means the value of the input is controlled which means it's a controlled component because it's value is managed by React and changes only when state is updated
-    }));
-  }; //this will ensure that the form state is updated dynamically as the user interacts with the form
-*/
-
   const handleSubmit = async (e) => {
+    e.preventDefault();
     const newErrors = {}; // Initialize empty error object
 
     if (!fName) newErrors.fName = "Required!";
@@ -66,7 +56,10 @@ const SignUp = () => {
       try {
         const response = await axios.post(
           "http://localhost:5000/api/auth/signup",
-          formData
+          formData,
+          {
+            headers: { "Content-Type": "application/json" },
+          }
         );
         console.log("Response:", response);
         setResponseMessage("Sign Up successful");
