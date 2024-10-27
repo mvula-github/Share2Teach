@@ -7,21 +7,20 @@ import { Link } from "react-router-dom";
 import "react-pro-sidebar/dist/css/styles.css";
 import { useContext } from "react";
 import { ColorModeContext, tokens } from "../../theme";
-import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
-import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
-import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
-import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
-import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
-import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
-import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import {
   ChecklistOutlined,
-  DashboardOutlined,
   FileUploadOutlined,
   LibraryBooksOutlined,
   LocalLibraryOutlined,
   SchoolOutlined,
+  DarkModeOutlined,
+  LightModeOutlined,
+  MenuOutlined,
+  HelpOutlineOutlined,
+  TimelineOutlined,
+  ContactsOutlined,
+  PeopleOutlined,
+  HomeOutlined,
 } from "@mui/icons-material";
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
@@ -58,9 +57,6 @@ const SideBar = () => {
         "& .pro-icon-wrapper": {
           backgroundColor: "transparent !important",
         },
-        // "& .pro-inner-item": {
-        //   marginLeft: "-10px !important",
-        // },
         "& .pro-inner-item:hover": {
           color: "#868dfb !important",
         },
@@ -74,7 +70,7 @@ const SideBar = () => {
           {/* LOGO AND MENU ICON */}
           <MenuItem
             onClick={() => setIsCollapsed(!isCollapsed)}
-            icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
+            icon={isCollapsed ? <MenuOutlined /> : undefined}
             style={{
               margin: "0px 0 5px 0",
               color: colors.navy[500],
@@ -83,16 +79,16 @@ const SideBar = () => {
             {!isCollapsed && (
               <Box display="flex" justifyContent="center" alignItems="center">
                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
-                  <MenuOutlinedIcon />
+                  <MenuOutlined />
                 </IconButton>
               </Box>
             )}
             <Box display="flex" justifyContent="center">
               <IconButton onClick={colorMode.toggleColorMode}>
                 {theme.palette.mode === "dark" ? (
-                  <DarkModeOutlinedIcon />
+                  <DarkModeOutlined />
                 ) : (
-                  <LightModeOutlinedIcon />
+                  <LightModeOutlined />
                 )}
               </IconButton>
             </Box>
@@ -117,7 +113,7 @@ const SideBar = () => {
             <Item
               title="Home"
               to="/home"
-              icon={<HomeOutlinedIcon />}
+              icon={<HomeOutlined />}
               selected={selected}
               setSelected={setSelected}
             />
@@ -132,14 +128,14 @@ const SideBar = () => {
             </Typography>
             <Item
               title="Subjects"
-              to="/team"
+              to="/subjects"
               icon={<LibraryBooksOutlined />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
               title="Self-Directed Learning"
-              to="/contacts"
+              to="/sdl"
               icon={<SchoolOutlined />}
               selected={selected}
               setSelected={setSelected}
@@ -154,7 +150,7 @@ const SideBar = () => {
             <Item
               title="FAQ Page"
               to="/faq"
-              icon={<HelpOutlineOutlinedIcon />}
+              icon={<HelpOutlineOutlined />}
               selected={selected}
               setSelected={setSelected}
             />
@@ -201,28 +197,28 @@ const SideBar = () => {
             <Item
               title="Manage Users"
               to="/users"
-              icon={<PeopleOutlinedIcon />}
+              icon={<PeopleOutlined />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
               title="Manage FAQs"
               to="/managefaq"
-              icon={<HelpOutlineOutlinedIcon />}
+              icon={<HelpOutlineOutlined />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
               title="View Contributors"
               to="/contributors"
-              icon={<ContactsOutlinedIcon />}
+              icon={<ContactsOutlined />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
               title="Analytics"
               to="/line"
-              icon={<TimelineOutlinedIcon />}
+              icon={<TimelineOutlined />}
               selected={selected}
               setSelected={setSelected}
             />

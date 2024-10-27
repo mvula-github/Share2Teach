@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
-import PropTypes from "prop-types";
+//import PropTypes from "prop-types";
 import "./Subjects.css";
 
 const Subjects = () => {
@@ -126,10 +126,6 @@ const Subjects = () => {
       )}
     </div>
   );
-};
-
-Subjects.propTypes = {
-  category: PropTypes.string.isRequired,
 };
 
 export default Subjects;
