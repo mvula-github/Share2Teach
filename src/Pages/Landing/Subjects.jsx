@@ -4,7 +4,7 @@ import axios from "axios";
 import PropTypes from "prop-types";
 import "./Subjects.css";
 
-const Subjects = ({ category }) => {
+const Subjects = () => {
   const location = useLocation();
   const [subjects, setSubjects] = useState([]);
   const [selectedSubject, setSelectedSubject] = useState(null);
@@ -58,10 +58,7 @@ const Subjects = ({ category }) => {
   };
 
   // Filter subjects based on the selected category from the navbar and also from the search results
-  const filteredSubjects =
-    category === "all"
-      ? subjects
-      : subjects.filter((subject) => subject.category);
+  const filteredSubjects = subjects;
 
   return (
     <div className="subject-container">
@@ -86,7 +83,11 @@ const Subjects = ({ category }) => {
                 )
               }
             >
+              {subject.fileName}
               {subject.subject}
+
+              {subject.grade}
+              {subject.year}
             </div>
           ))
         ) : (
