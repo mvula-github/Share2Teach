@@ -51,10 +51,14 @@ const Footer = () => {
                 </li>
               </a>
               <a href="#">
-                <li className="footer-item">self-directed learning</li>
+                <li className="footer-item">
+                  <Link to="/sdl">Self-Directed Learning</Link>
+                </li>
               </a>
               <a href="#">
-                <li className="footer-item">FAQ</li>
+                <li className="footer-item">
+                  <Link to="/faq">FAQs</Link>
+                </li>
               </a>
             </ul>
           </div>
