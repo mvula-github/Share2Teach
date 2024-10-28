@@ -58,6 +58,7 @@ const SignUp = () => {
           formData,
           {
             headers: { "Content-Type": "application/json" },
+            withCredentials: true,
           }
         );
         console.log("Response:", response);
@@ -101,6 +102,7 @@ const SignUp = () => {
           formData,
           {
             headers: { "Content-Type": "application/json" },
+            //withCredentials: true,
           }
         );
         console.log("Response:", response);

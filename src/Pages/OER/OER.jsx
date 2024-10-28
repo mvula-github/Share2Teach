@@ -61,62 +61,9 @@ const OER = () => {
           <p>Learn how to use the platform step-by-step.</p>
         </Link>
       </div>
-      <section className="upload-section">
-        <h2>Upload a Past Paper (Educators/Admin Only)</h2>
-
-        {/* ------- UploadForm Component ------- */}
-        <UploadForm onUploadSuccess={handleUploadSuccess} />
-        {/* ------- End of UploadForm Component ------- */}
-      </section>
-      {/* ------- PapersList Component ------- */}
-      <h2>Papers List</h2>
-      {error && <p className="error-message">{error}</p>}{" "}
-      {/* Display error message if exists */}
-      <ul>
-        {papers.map((paper) => (
-          <li key={paper.id}>{paper.title}</li>
-        ))}
-      </ul>
-      {/* ------- End of PapersList Component ------- */}
     </div>
   );
 };
-
-// ----- UploadForm Component -----
-const UploadForm = ({ onUploadSuccess }) => {
-  const [file, setFile] = useState(null);
-  const [error, setError] = useState(null);
-
-  const handleFileChange = (e) => {
-    setFile(e.target.files[0]);
-  };
-
-  const handleUpload = async (e) => {
-    e.preventDefault();
-    setError(null); // Reset error state before uploading
-    try {
-      const formData = new FormData();
-      formData.append("file", file);
-      // Add other necessary form data here
-
-      const response = await axios.post("/api/upload", formData);
-      onUploadSuccess(); // Call the success handler if the upload is successful
-    } catch (err) {
-      console.error("Error uploading file:", err);
-      setError("Failed to upload file. Please try again."); // Set an error message
-    }
-  };
-
-  return (
-    <form onSubmit={handleUpload}>
-      <input type="file" onChange={handleFileChange} required />
-      <button type="submit">Upload</button>
-      {error && <p className="error-message">{error}</p>}{" "}
-      {/* Display error message if exists */}
-    </form>
-  );
-};
-// ----- End of UploadForm Component -----
 
 // eslint-disable-next-line react-refresh/only-export-components
 export default OER;

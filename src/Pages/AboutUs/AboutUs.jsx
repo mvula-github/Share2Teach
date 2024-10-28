@@ -104,7 +104,7 @@ const AboutUs = () => {
 
         <div className="developer-bubble">
           <img
-            src="../../../public/assets/dev_team/Olwethu.jpg"
+            src="../../assets/dev_team/Olwethu.jpg"
             alt="developer 1"
             className="developer-img"
           />
@@ -121,7 +121,7 @@ const AboutUs = () => {
         {/* John Smith's bubble */}
         <div className="developer-bubble">
           <img
-            src="../../../public/assets/dev_team/Jameela.jpg"
+            src="../../assets/dev_team/Jameela.jpg"
             alt="developer 2"
             className="developer-img"
           />
