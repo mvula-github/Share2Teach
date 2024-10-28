@@ -1,11 +1,10 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useState, useContext, useEffect } from "react";
 import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
 import "react-pro-sidebar/dist/css/styles.css";
-import { useContext } from "react";
 import { ColorModeContext, tokens } from "../../theme";
 import {
   ChecklistOutlined,
@@ -41,12 +40,13 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
   );
 };
 
-const SideBar = () => {
+const SideBar = ({ role }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selected, setSelected] = useState("Home");
+  console.log(role);
 
   return (
     <Box
@@ -155,73 +155,86 @@ const SideBar = () => {
               setSelected={setSelected}
             />
 
-            <Typography
-              variant="h6"
-              color={colors.navy[500]}
-              sx={{ m: "5px 0 5px 5px" }}
-              display={!isCollapsed ? undefined : "none"}
-            >
-              Educators
-            </Typography>
-            <Item
-              title="Contribute"
-              to="/contribute"
-              icon={<FileUploadOutlined />}
-              selected={selected}
-              setSelected={setSelected}
-            />
+            {role === "educator" && (
+              <>
+                <Typography
+                  variant="h6"
+                  color={colors.navy[500]}
+                  sx={{ m: "5px 0 5px 5px" }}
+                  display={!isCollapsed ? undefined : "none"}
+                >
+                  Educators
+                </Typography>
+                <Item
+                  title="Contribute"
+                  to="/contribute"
+                  icon={<FileUploadOutlined />}
+                  selected={selected}
+                  setSelected={setSelected}
+                />
+              </>
+            )}
 
-            <Typography
-              variant="h6"
-              color={colors.navy[500]}
-              sx={{ m: "5px 0 5px 5px" }}
-              display={!isCollapsed ? undefined : "none"}
-            >
-              Moderators
-            </Typography>
-            <Item
-              title="Moderate"
-              to="/moderate"
-              icon={<ChecklistOutlined />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Typography
-              variant="h6"
-              color={colors.navy[500]}
-              sx={{ m: "5px 0 5px 5px" }}
-              display={!isCollapsed ? undefined : "none"}
-            >
-              Admins
-            </Typography>
-            <Item
-              title="Manage Users"
-              to="/users"
-              icon={<PeopleOutlined />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Manage FAQs"
-              to="/managefaq"
-              icon={<HelpOutlineOutlined />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="View Contributors"
-              to="/contributors"
-              icon={<ContactsOutlined />}
-              selected={selected}
-              setSelected={setSelected}
-            />
-            <Item
-              title="Analytics"
-              to="/line"
-              icon={<TimelineOutlined />}
-              selected={selected}
-              setSelected={setSelected}
-            />
+            {role === "moderator" && (
+              <>
+                <Typography
+                  variant="h6"
+                  color={colors.navy[500]}
+                  sx={{ m: "5px 0 5px 5px" }}
+                  display={!isCollapsed ? undefined : "none"}
+                >
+                  Moderators
+                </Typography>
+                <Item
+                  title="Moderate"
+                  to="/moderate"
+                  icon={<ChecklistOutlined />}
+                  selected={selected}
+                  setSelected={setSelected}
+                />
+              </>
+            )}
+
+            {role === "educator" && (
+              <>
+                <Typography
+                  variant="h6"
+                  color={colors.navy[500]}
+                  sx={{ m: "5px 0 5px 5px" }}
+                  display={!isCollapsed ? undefined : "none"}
+                >
+                  Admins
+                </Typography>
+                <Item
+                  title="Manage Users"
+                  to="/users"
+                  icon={<PeopleOutlined />}
+                  selected={selected}
+                  setSelected={setSelected}
+                />
+                <Item
+                  title="Manage FAQs"
+                  to="/managefaq"
+                  icon={<HelpOutlineOutlined />}
+                  selected={selected}
+                  setSelected={setSelected}
+                />
+                <Item
+                  title="View Contributors"
+                  to="/contributors"
+                  icon={<ContactsOutlined />}
+                  selected={selected}
+                  setSelected={setSelected}
+                />
+                <Item
+                  title="Analytics"
+                  to="/line"
+                  icon={<TimelineOutlined />}
+                  selected={selected}
+                  setSelected={setSelected}
+                />
+              </>
+            )}
           </Box>
         </Menu>
       </ProSidebar>

@@ -95,9 +95,7 @@ function Moderate() {
               <Typography variant="body2">
                 Description: {file.description}
               </Typography>
-              <a href={`/${file.userFile}`} download>
-                Download File
-              </a>
+              <a href={`/${file.userFile}`}>Download File</a>
               <TextField
                 label="Comments"
                 value={comments[file._id] || ""}

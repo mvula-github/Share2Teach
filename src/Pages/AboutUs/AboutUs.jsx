@@ -73,22 +73,22 @@ const AboutUs = () => {
         {/* Jane Doe's bubble */}
         <div className="developer-bubble">
           <img
-            src="developer1.jpg"
+            src="../../public/assets/dev_team/Mvula.jpg"
             alt="developer 1"
             className="developer-img"
           />
           <h3>Mvula Kolweni</h3>
           <p className="developer-role">Developer</p>
           <p className="developer-bio">
-            Jane has a passion for education and has been teaching for over 10
-            years. She co-founded Share2Teach to help students access
-            high-quality learning resources.
+            Your typical IT specialist, a tech-savvy problem-solver at heart,
+            skilled in various programming languages/frameworks,catching up with
+            the latest tools, and driven by a passion of technology.
           </p>
         </div>
 
         <div className="developer-bubble">
           <img
-            src="../../../public/assets/dev_team/Nick_Dev.jpg"
+            src="../../assets/dev_team/Nick_Dev.jpg"
             alt="developer 1"
             className="developer-img"
           />
@@ -97,40 +97,40 @@ const AboutUs = () => {
           <p className="developer-bio">
             A passionate software developer with a keen interest in
             cybersecurity. Thrives on creating innovative solutions while
-            ensuring robust security measures are in place. With a strong
-            foundation in coding, continuously seeks to expand my knowledge in
-            both fields.
+            ensuring robust security measures are in place in whatever he
+            develops.
           </p>
         </div>
 
         <div className="developer-bubble">
           <img
-            src="developer1.jpg"
+            src="../../../public/assets/dev_team/Olwethu.jpg"
             alt="developer 1"
             className="developer-img"
           />
           <h3>Olwethu Zungu</h3>
           <p className="developer-role">Developer</p>
           <p className="developer-bio">
-            Jane has a passion for education and has been teaching for over 10
-            years. She co-founded Share2Teach to help students access
-            high-quality learning resources.
+            An aspiring IT specialist interested in software and web
+            development, and data analytics. Her goal is to learn more about the
+            IT industry to expand her existing skillset to develop programs.
+            databases
           </p>
         </div>
 
         {/* John Smith's bubble */}
         <div className="developer-bubble">
           <img
-            src="developer.jpg"
+            src="../../../public/assets/dev_team/Jameela.jpg"
             alt="developer 2"
             className="developer-img"
           />
           <h3>Jameela Sparks</h3>
           <p className="developer-role">Developer</p>
           <p className="developer-bio">
-            John is a full-stack developer who believes in the power of
-            technology to enhance education. He built the Share2Teach platform
-            to bridge gaps in academic resources.
+            A developer with an interest in databases and cybersecurity,
+            moreover wants to improve her skills, and wants to explore
+            unconventional ways and techniques to solve problems.
           </p>
         </div>
       </div>
